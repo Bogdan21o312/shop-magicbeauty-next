@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
    <div>
-     Test number two
+     Test number three
    </div>
   )
 }
