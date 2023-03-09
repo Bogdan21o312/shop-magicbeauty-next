@@ -1,5 +1,5 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {testAPI} from "@/app/services/test";
+import {testAPI} from "@/services/test.api";
 
 const rootReducer = combineReducers({
     [testAPI.reducerPath]: testAPI.reducer,
@@ -8,6 +8,8 @@ const rootReducer = combineReducers({
 export const setupStore = () => {
     return configureStore({
         reducer: rootReducer,
+        middleware: getDefaultMiddleware =>
+            getDefaultMiddleware().concat(testAPI.middleware)
     })
 }
 
