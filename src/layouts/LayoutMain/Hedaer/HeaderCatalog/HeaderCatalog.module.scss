@@ -20,8 +20,8 @@
   grid-template-columns: repeat(5, 1fr);
   row-gap: rem(10);
   @include adaptiveValue("column-gap", 180, 10);
-  padding-top: rem(18);
-  padding-bottom: rem(18);
+  //padding-top: rem(18);
+  //padding-bottom: rem(18);
 }
 
 .catalogItem {
@@ -29,6 +29,20 @@
   color: $ColorWhite;
   font-size: rem(18);
   font-weight: 500;
+  padding-top: rem(18);
+  padding-bottom: rem(18);
+  transition: all 0.3s ease 0s;
+  border-bottom: rem(2) solid rgba(255, 255, 255, 0);
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.8;
+      border-bottom: rem(2) solid $ColorWhite;
+    }
+  }
+
+  &.active {
+    border-bottom: rem(2) solid $ColorWhite;
+  }
 }
 
 .active {
@@ -70,6 +84,7 @@
   font-weight: 700;
   font-size: rem(16);
   line-height: math.div(20, 16);
+
   &.active {
     position: static;
   }

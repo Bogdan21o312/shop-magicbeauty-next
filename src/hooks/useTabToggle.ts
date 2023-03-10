@@ -1,19 +1,21 @@
-import {useState} from "react";
+import { useState } from "react";
 
-export const useTabsToggle = (initialActiveTab: string) => {
-    const [activeTab, setActiveTab] = useState(initialActiveTab);
+export const useTabsToggle = () => {
+    const [activeTab, setActiveTab] = useState(null);
 
-    const getTabProps = (tabId: string) => {
+    const getTabProps = (tabId: any) => {
         const isActive = activeTab === tabId;
 
         const onClick = () => {
-            if (!isActive) {
+            if (isActive) {
+                setActiveTab(null);
+            } else {
                 setActiveTab(tabId);
             }
         };
 
-        return {isActive, onClick};
+        return { isActive, onClick };
     };
 
-    return {activeTab, setActiveTab, getTabProps};
+    return { activeTab, setActiveTab, getTabProps };
 };

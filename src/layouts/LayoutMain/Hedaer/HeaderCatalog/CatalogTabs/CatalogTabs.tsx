@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {FC, useEffect} from 'react';
 import {useTabsToggle} from "@/hooks/useTabToggle";
 import {
     catalog,
@@ -37,7 +37,7 @@ interface TabsProps {
     onTabChange?: (tabId: string) => void;
 }
 
-export const CatalogTabs: React.FC<TabsProps> = ({
+export const CatalogTabs: FC<TabsProps> = ({
                                                      tabs,
                                                      initialActiveTab = tabs[0].id,
                                                      lazyLoad = false,
@@ -47,11 +47,11 @@ export const CatalogTabs: React.FC<TabsProps> = ({
                                                      },
                                                  }) => {
     const {activeTab, setActiveTab, getTabProps} = useTabsToggle(
-        initialActiveTab
+        // initialActiveTab
     );
 
     useEffect(() => {
-        onTabChange(activeTab);
+        // onTabChange(activeTab);
     }, [activeTab, onTabChange]);
 
     const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab);
