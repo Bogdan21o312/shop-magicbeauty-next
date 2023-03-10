@@ -1,0 +1,13 @@
+@import "src/assets/styles/style";
+
+.top {
+  text-align: center;
+  background-color: $ColorMain;
+  @include adaptiveValue("font-size", 14, 10);
+  padding: rem(5);
+  color: $ColorWhite;
+
+  span {
+    max-width: rem(1920);
+  }
+}

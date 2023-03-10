@@ -1,0 +1,101 @@
+@use "sass:math";
+@import "src/assets/styles/style";
+
+.main {
+  background-color: $ColorMain;
+}
+
+.mainContainer {
+  max-width: rem(2560);
+  padding-right: rem(50);
+  padding-left: rem(50);
+}
+
+.catalog {
+  position: relative;
+}
+
+.catalogItems {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: rem(10);
+  @include adaptiveValue("column-gap", 180, 10);
+  padding-top: rem(18);
+  padding-bottom: rem(18);
+}
+
+.catalogItem {
+  display: block;
+  color: $ColorWhite;
+  font-size: rem(18);
+  font-weight: 500;
+}
+
+.active {
+  position: static;
+}
+
+.catalogBody {
+  min-width: 100%;
+  position: absolute;
+}
+
+.catalogBodyItems {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: rem(10);
+  @include adaptiveValue("column-gap", 180, 10);
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  border-bottom: rem(1) solid $ColorMain;
+}
+
+
+.catalogBodyItemList {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+.catalogBodyItem {
+  display: block;
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.catalogBodyLink {
+  display: block;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: math.div(20, 16);
+  &.active {
+    position: static;
+  }
+}
+
+.catalogBodySubItems {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: rem(10);
+  @include adaptiveValue("column-gap", 180, 10);
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+}
+
+.catalogBodySubList {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+.catalogBodySubItem {
+
+}
+
+.catalogBodySubLink {
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: math.div(20, 16);
+}

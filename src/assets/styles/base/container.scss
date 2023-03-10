@@ -9,7 +9,7 @@ For example header__container, main__container etc.
 */
 @if ($responsiveType==1) {
   // Responsive
-  [class*="__container"] {
+  .container {
     @if ($maxWidthContainer>0) {
       max-width: rem($containerWidth);
       margin: 0 auto;
@@ -25,7 +25,7 @@ For example header__container, main__container etc.
   }
 } @else {
   // By break points
-  [class*="__container"] {
+  .container {
     margin: 0 auto;
     @if ($maxWidthContainer>0) {
       max-width: rem($containerWidth);
