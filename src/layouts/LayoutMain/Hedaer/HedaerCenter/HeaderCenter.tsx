@@ -19,8 +19,8 @@ import {
     actionsLove,
     actionsPhones
 } from "./HedaerCenter.module.scss"
-import {Svg} from "@/components/Svg";
 import Link from "next/link";
+import {Cart, Location, Love, Search} from "@/assets/config";
 
 export const HeaderCenter = () => {
     return (
@@ -31,7 +31,7 @@ export const HeaderCenter = () => {
             <div className={search}>
                 <form action="#" className={searchForm}>
                     <button className={searchButton}>
-                        <Svg dark search/>
+                        <Search/>
                     </button>
                     <input autoComplete="off" type="text" placeholder="Search" className={searchInput}/>
                 </form>
@@ -39,7 +39,7 @@ export const HeaderCenter = () => {
             <div className={actions}>
                 <Link href='#' className={actionsLocation}>
                     <div className={actionsLocationIcon}>
-                        <Svg location dark hover/>
+                        <Location/>
                     </div>
                     <div className={actionsLocationText}>Тернопіль</div>
                 </Link>
@@ -48,13 +48,13 @@ export const HeaderCenter = () => {
                     <button type="button" className={actionsCallback}>Замовити дзвінок</button>
                 </div>
                 <div className={actionsLove}>
-                    <Svg dark love hover/>
+                    <Love/>
                     <span>0</span>
                 </div>
             </div>
             <div className={cart}>
                 <div className={cartIcon}>
-                    <Svg dark cart hover/>
+                    <Cart/>
                     <span>0</span>
                 </div>
                 <div className={cartBody}>

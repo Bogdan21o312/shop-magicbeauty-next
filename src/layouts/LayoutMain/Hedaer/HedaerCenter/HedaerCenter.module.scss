@@ -66,8 +66,14 @@
     align-items: center;
     font-weight: 600;
     @include adaptiveValue("margin-right", 25, 0, 1620, 1400, 1);
+    path {
+      transition: all 0.3s ease 0s;
+    }
     @media (any-hover: hover) {
       &:hover {
+        path {
+          fill: $ColorMain !important;
+        }
         .actionsLocationText {
           color: $ColorMain;
         }
@@ -124,9 +130,19 @@
   }
 
   &Love {
+    cursor: pointer;
     position: relative;
     margin-right: rem(50);
-
+    path {
+      transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        path {
+          fill: $ColorMain !important;
+        }
+      }
+    }
     span {
       min-width: rem(20);
       min-height: rem(20);
@@ -159,6 +175,17 @@
     margin-right: rem(15);
     display: inline-block;
     position: relative;
+    cursor: pointer;
+    path {
+      transition: all 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        path {
+          stroke: $ColorMain !important;
+        }
+      }
+    }
 
     span {
       min-width: rem(16);
@@ -191,6 +218,7 @@
     }
 
     &Link {
+      cursor: pointer;
       color: $ColorMain;
       transition: all 0.3s ease 0s;
       @media (any-hover: hover) {
