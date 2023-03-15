@@ -6,7 +6,7 @@ interface RatingProps {
     ajax?: boolean;
 }
 
-const Rating: React.FC<RatingProps> = ({ value = 0, onChange, ajax }) => {
+export const StarRating: React.FC<RatingProps> = ({ value = 0, onChange, ajax }) => {
     const [hoverValue, setHoverValue] = useState(0);
 
     const handleMouseEnter = (value: number) => {
@@ -66,5 +66,3 @@ const Rating: React.FC<RatingProps> = ({ value = 0, onChange, ajax }) => {
 
     return <div className="rating">{starIcons}</div>;
 };
-
-export default Rating;

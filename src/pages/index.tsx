@@ -1,10 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import {Inter} from 'next/font/google'
-import Rating from "@/ui/Rating/Rating";
 import {useState} from "react";
 import {useStarRating} from "@/hooks";
 import {Button} from "@/ui";
+import {ProductCard} from "@/components";
+import Image from "../assets/images/test.jpeg"
+import {Slider} from "@/components/Slider";
 
 export default function Home() {
 
@@ -15,8 +16,8 @@ export default function Home() {
     };
 
     return (
-        <div style={{marginTop: 200}}>
-            <Button as={'button'} text='dadf'>flaksdm</Button>
+        <div style={{paddingTop: 300}}>
+            <Slider/>
         </div>
     )
 }
