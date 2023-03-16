@@ -1,21 +1,21 @@
 import React, {ElementType} from 'react';
-import {clMain, clTitleBig, clTitle, clTitleSub, clText, clTextSmall, clLink, clCenter, clOpacity, clLight} from "./Text.module.scss";
+import classes from "./Text.module.scss";
 import {defaultElementText, ITextProps} from "@/UI/Text/IText";
 
 export const Text = <E extends ElementType = typeof defaultElementText>({as, title, text, children, center, link, subTitle, opacity, light, smallText, titleBig, ...otherProps}: ITextProps<E>) => {
     const TagName = as || defaultElementText;
 
-    const classesMain = clMain
+    const classesMain = classes.clMain
     let classesName = [classesMain]
-    const classesBig = clTitleBig
-    const classesTitle = clTitle
-    const classesSubTitle = clTitleSub
-    const classesText = clText
-    const classesSmallText = clTextSmall
-    const classesLink = clLink
-    const classesCenter = clCenter
-    const classesOpacity = clOpacity
-    const classesLight = clLight
+    const classesBig = classes.clTitleBig
+    const classesTitle = classes.clTitle
+    const classesSubTitle = classes.clTitleSub
+    const classesText = classes.clText
+    const classesSmallText = classes.clTextSmall
+    const classesLink = classes.clLink
+    const classesCenter = classes.clCenter
+    const classesOpacity = classes.clOpacity
+    const classesLight = classes.clLight
 
     if (titleBig) {
         classesName.push(classesBig)

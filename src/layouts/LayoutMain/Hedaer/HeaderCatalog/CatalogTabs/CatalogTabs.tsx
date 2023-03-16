@@ -1,14 +1,6 @@
 import {FC, useEffect} from 'react';
 import {useTabsToggle} from "@/hooks/useTabToggle";
-import {
-    catalog,
-    catalogBody, catalogBodyItem,
-    catalogBodyItems,
-    catalogItems,
-    catalogItem,
-    active,
-    catalogBodySubItems,
-} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalog.module.scss";
+import classes from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalog.module.scss";
 
 interface Tab {
     id: string;
@@ -57,16 +49,16 @@ export const CatalogTabs: FC<TabsProps> = ({
     const activeTabIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
     return (
-        <div className={catalog}>
-            <div className={catalogItems}>
+        <div className={classes.catalog}>
+            <div className={classes.catalogItems}>
                 {tabs.map((tab) => {
                     const {isActive, onClick} = getTabProps(tab.id);
 
                     return (
                         <button
                             key={tab.id}
-                            className={`${catalogItem} ${
-                                isActive ? active : ''
+                            className={`${classes.catalogItem} ${
+                                isActive ? classes.active : ''
                             }`}
                             onClick={onClick}
                         >
@@ -75,7 +67,7 @@ export const CatalogTabs: FC<TabsProps> = ({
                     );
                 })}
             </div>
-            <div className={catalogBody}>
+            <div className={classes.catalogBody}>
                 {tabs.map((tab, index) => {
                     const isActive = activeTabIndex === index;
 
@@ -86,7 +78,7 @@ export const CatalogTabs: FC<TabsProps> = ({
                     return (
                         <ul
                             key={tab.id}
-                            className={catalogBodyItems}
+                            className={classes.catalogBodyItems}
                         >
                             {tab.content}
                         </ul>
@@ -100,7 +92,7 @@ export const CatalogTabs: FC<TabsProps> = ({
                     return (
                         <div
                             key={tab.id}
-                            className={catalogBodySubItems}
+                            className={classes.catalogBodySubItems}
                         >
                             {tab.links}
                         </div>

@@ -18,9 +18,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "compilerOptions": {
-      "plugins": [{ "name": "typescript-plugin-css-modules" }]
-    },
     "plugins": [
       {
         "name": "next"

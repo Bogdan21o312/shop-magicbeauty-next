@@ -1,7 +1,7 @@
 import {Advantages, MainImage, MainSlider} from "@/pages/home/modules/MainBlock/components";
 import Image from "../../../../assets/images/main.jpeg"
 import coverImage from "../../../../assets/images/cover.jpg"
-import {main, flex, slider, image, mainImageIbg, footer, mainImage, title} from "./MainBlock.module.scss"
+import classes from "./MainBlock.module.scss"
 import {Ibg, Text} from "@/UI";
 
 export const MainBlock = () => {
@@ -26,22 +26,22 @@ export const MainBlock = () => {
 
 
     return (
-        <div className={main}>
-            <div className={mainImage}>
-                <Ibg src={coverImage} alt={'cover'} modClass={mainImageIbg}/>
+        <div className={classes.main}>
+            <div className={classes.mainImage}>
+                <Ibg src={coverImage} alt={'cover'} modClass={classes.mainImageIbg}/>
             </div>
-            <div className={title}>
+            <div className={classes.title}>
                 <Text titleBig as={'h1'}>Головна</Text>
             </div>
-            <div className={flex}>
-                <div className={slider}>
+            <div className={classes.flex}>
+                <div className={classes.slider}>
                     <MainSlider data={data}/>
                 </div>
-                <div className={image}>
+                <div className={classes.image}>
                     <MainImage mainImage={Image} mainAlt={'Main'}/>
                 </div>
             </div>
-            <div className={footer}>
+            <div className={classes.footer}>
                 <Advantages/>
             </div>
         </div>

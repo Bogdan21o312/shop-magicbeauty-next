@@ -1,4 +1,4 @@
-import {main} from "./Section.module.scss"
+import classes from "./Section.module.scss"
 import {FC, ReactNode} from "react";
 
 interface SectionProps {
@@ -7,7 +7,7 @@ interface SectionProps {
 
 export const Section:FC<SectionProps> = ({children}) => {
     return (
-        <section className={main}>
+        <section className={classes.main}>
             {children}
         </section>
     );

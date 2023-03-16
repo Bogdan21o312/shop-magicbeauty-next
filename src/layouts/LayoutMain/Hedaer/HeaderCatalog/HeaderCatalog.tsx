@@ -1,21 +1,13 @@
 import {tabsData} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalogItems";
-import {
-    main,
-    catalogBodyItem,
-    catalogBodyLink,
-    mainContainer,
-    catalogBodySubItem,
-    catalogBodySubLink,
-    catalogBodySubList,
-} from "./HeaderCatalog.module.scss"
+import classes from "./HeaderCatalog.module.scss"
 import Link from "next/link";
 import {CatalogTabs} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/CatalogTabs";
 
 export const HeaderCatalog = () => {
 
     return (
-        <div className={main}>
-            <div className={mainContainer}>
+        <div className={classes.main}>
+            <div className={classes.mainContainer}>
                 <CatalogTabs
                     tabs={tabsData.map(({id, title, content}) => ({
                         id,
@@ -23,8 +15,8 @@ export const HeaderCatalog = () => {
                         content: (
                             <>
                                 {content.map(({id: linkId, text}) => (
-                                    <li key={linkId} className={catalogBodyItem}>
-                                        <Link className={catalogBodyLink} key={linkId} href={`#${linkId}`}>
+                                    <li key={linkId} className={classes.catalogBodyItem}>
+                                        <Link className={classes.catalogBodyLink} key={linkId} href={`#${linkId}`}>
                                             {text}
                                         </Link>
                                     </li>
@@ -33,46 +25,46 @@ export const HeaderCatalog = () => {
                         ),
                         links: (
                             <>
-                                <ul className={catalogBodySubList}>
+                                <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li key={linkId} className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
+                                        <li key={linkId} className={classes.catalogBodySubItem}>
+                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
-                                <ul className={catalogBodySubList}>
+                                <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li key={linkId} className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
+                                        <li key={linkId} className={classes.catalogBodySubItem}>
+                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
-                                <ul className={catalogBodySubList}>
+                                <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li key={linkId} className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
+                                        <li key={linkId} className={classes.catalogBodySubItem}>
+                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
-                                <ul className={catalogBodySubList}>
+                                <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li key={linkId} className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
+                                        <li key={linkId} className={classes.catalogBodySubItem}>
+                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
                                     ))}
                                 </ul>
-                                <ul className={catalogBodySubList}>
+                                <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li key={linkId} className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
+                                        <li key={linkId} className={classes.catalogBodySubItem}>
+                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>

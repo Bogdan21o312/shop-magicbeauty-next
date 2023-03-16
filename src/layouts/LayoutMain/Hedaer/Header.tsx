@@ -1,4 +1,4 @@
-import {header, headerContent} from "./Header.module.scss"
+import classes from "./Header.module.scss"
 import {HeaderTop} from "@/layouts/LayoutMain/Hedaer/HedaerTop";
 import {HeaderCenter} from "@/layouts/LayoutMain/Hedaer/HedaerCenter";
 import {HeaderCatalog} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog";
@@ -6,9 +6,9 @@ import {HeaderCatalog} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog";
 
 export const Header = () => {
     return (
-        <header className={header}>
+        <header className={classes.header}>
             <HeaderTop/>
-            <div className={headerContent}>
+            <div className={classes.headerContent}>
                 <HeaderCenter/>
             </div>
             <HeaderCatalog/>

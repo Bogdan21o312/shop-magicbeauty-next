@@ -3,14 +3,14 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper";
 import "swiper/css";
 
-import {button, text, title, main} from "./MainSlider.module.scss"
+import classes from "./MainSlider.module.scss"
 import {FC} from "react";
 import {IMainSlider} from "@/pages/home/modules/MainBlock/components/MainSlider/IMainSlider";
 
 export const MainSlider: FC<IMainSlider> = ({data}) => {
     return (
         <>
-            <Swiper className={main}
+            <Swiper className={classes.main}
                 loop={true}
                 pagination={{
                     clickable: true,
@@ -29,15 +29,15 @@ export const MainSlider: FC<IMainSlider> = ({data}) => {
             >
                 {data.map(item =>
                     <SwiperSlide key={item.title}>
-                        <div className={title}>
+                        <div className={classes.title}>
                             <Text title>{item.title}</Text>
                         </div>
-                        <div className={text}>
+                        <div className={classes.text}>
                             <Text text>
                                 {item.text}
                             </Text>
                         </div>
-                        <div className={button}>
+                        <div className={classes.button}>
                             <Button as={'button'} text={item.button}/>
                         </div>
                     </SwiperSlide>

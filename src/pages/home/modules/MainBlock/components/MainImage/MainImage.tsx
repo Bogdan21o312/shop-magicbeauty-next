@@ -1,5 +1,5 @@
 import {Ibg} from "@/UI";
-import {main, tips, clImageIbg, clImage, icon, icon01, icon03, icon02, body} from "./MainImage.module.scss"
+import classes from "./MainImage.module.scss"
 import {Plus} from "@/assets/config";
 import {FC} from "react";
 import {IMainImage} from "@/pages/home/modules/MainBlock/components/MainImage/IMainImage";
@@ -7,12 +7,12 @@ import {Tooltip} from "@/UI/Tooltip";
 
 export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
     return (
-        <div className={main}>
-            <div className={body}>
-                <div className={clImage}>
-                    <Ibg src={mainImage} alt={mainAlt} modClass={clImageIbg}/>
+        <div className={classes.main}>
+            <div className={classes.body}>
+                <div className={classes.clImage}>
+                    <Ibg src={mainImage} alt={mainAlt} modClass={classes.clImageIbg}/>
                 </div>
-                <div className={tips}>
+                <div className={classes.tips}>
                     {/*<Tooltip*/}
                     {/*    position="top"*/}
                     {/*    offsetY={10}*/}
@@ -26,7 +26,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${icon} ${icon01}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon01}`}><Plus/></div>
                     {/*</Tooltip>*/}
                     {/*<Tooltip*/}
                     {/*    position="top"*/}
@@ -41,7 +41,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${icon} ${icon02}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon02}`}><Plus/></div>
                     {/*</Tooltip>*/}
                     {/*<Tooltip*/}
                     {/*    position="top"*/}
@@ -56,7 +56,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${icon} ${icon03}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon03}`}><Plus/></div>
                     {/*</Tooltip>*/}
                 </div>
             </div>

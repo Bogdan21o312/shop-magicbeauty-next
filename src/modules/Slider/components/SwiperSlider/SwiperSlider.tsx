@@ -1,6 +1,6 @@
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper";
-import {} from "./SwiperSlider.module.scss"
+import classes from "./SwiperSlider.module.scss"
 import Image from "../../../../assets/images/test.jpeg"
 import "swiper/css";
 import {ProductCard} from "@/components";

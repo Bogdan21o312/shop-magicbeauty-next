@@ -1,6 +1,6 @@
 
 export interface IIbg {
-    src: string | object
-    alt: string | object
+    src: any
+    alt: any
     modClass: string | object
 }
