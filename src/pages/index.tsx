@@ -9,12 +9,6 @@ import {SwiperSlider} from "@/modules/Slider/components/SwiperSlider";
 
 export default function Home() {
 
-    const second = 1000
-    const minutes = 1000 * 60
-    const hours = minutes * 600
-    const days = hours * 24
-
-
     const [rating, setRating] = useState(0);
 
     const handleRatingChange = (value: number) => {
