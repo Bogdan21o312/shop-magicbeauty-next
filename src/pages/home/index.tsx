@@ -1,5 +1,5 @@
-import {MainBlock} from "@/pages/home/modules";
 import {Slider} from "@/modules/Slider/Slider";
+import {MainBlock} from "@/modules";
 
 export default function index() {
     return (

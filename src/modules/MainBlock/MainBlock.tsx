@@ -1,6 +1,6 @@
-import {Advantages, MainImage, MainSlider} from "@/pages/home/modules/MainBlock/components";
-import Image from "../../../../assets/images/main.jpeg"
-import coverImage from "../../../../assets/images/cover.jpg"
+import {Advantages, MainImage, MainSlider} from "@/modules/MainBlock/components";
+import Image from "../../assets/images/main.jpeg"
+import coverImage from "../../assets/images/cover.jpg"
 import classes from "./MainBlock.module.scss"
 import {Ibg, Text} from "@/UI";
 

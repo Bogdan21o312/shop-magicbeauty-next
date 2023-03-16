@@ -2,7 +2,7 @@ import {Ibg} from "@/UI";
 import classes from "./MainImage.module.scss"
 import {Plus} from "@/assets/config";
 import {FC} from "react";
-import {IMainImage} from "@/pages/home/modules/MainBlock/components/MainImage/IMainImage";
+import {IMainImage} from "@/modules/MainBlock/components/MainImage/IMainImage";
 import {Tooltip} from "@/UI/Tooltip";
 
 export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
