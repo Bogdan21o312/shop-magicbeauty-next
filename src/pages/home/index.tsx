@@ -1,7 +1,7 @@
 import {MainBlock} from "@/pages/home/modules";
 import {Slider} from "@/modules/Slider/Slider";
 
-export default function () {
+export default function index() {
     return (
         <div style={{paddingTop: '400px'}}>
             <MainBlock/>

@@ -28,7 +28,7 @@ export const MainSlider: FC<IMainSlider> = ({data}) => {
                 speed={800}
             >
                 {data.map(item =>
-                    <SwiperSlide>
+                    <SwiperSlide key={item.title}>
                         <div className={title}>
                             <Text title>{item.title}</Text>
                         </div>

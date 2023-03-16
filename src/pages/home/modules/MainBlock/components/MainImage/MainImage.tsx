@@ -13,51 +13,51 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     <Ibg src={mainImage} alt={mainAlt} modClass={clImageIbg}/>
                 </div>
                 <div className={tips}>
-                    <Tooltip
-                        position="top"
-                        offsetY={10}
-                        offsetX={0}
-                        behavior="hover"
-                        renderContent={() => (
-                            <div>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text
-                                ever
-                            </div>
-                        )}
-                    >
+                    {/*<Tooltip*/}
+                    {/*    position="top"*/}
+                    {/*    offsetY={10}*/}
+                    {/*    offsetX={0}*/}
+                    {/*    behavior="hover"*/}
+                    {/*    renderContent={() => (*/}
+                    {/*        <div>*/}
+                    {/*            Lorem Ipsum is simply dummy text of the printing and typesetting*/}
+                    {/*            industry. Lorem Ipsum has been the industry's standard dummy text*/}
+                    {/*            ever*/}
+                    {/*        </div>*/}
+                    {/*    )}*/}
+                    {/*>*/}
                         <div className={`${icon} ${icon01}`}><Plus/></div>
-                    </Tooltip>
-                    <Tooltip
-                        position="top"
-                        offsetY={10}
-                        offsetX={0}
-                        behavior="hover"
-                        renderContent={() => (
-                            <div>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text
-                                ever
-                            </div>
-                        )}
-                    >
+                    {/*</Tooltip>*/}
+                    {/*<Tooltip*/}
+                    {/*    position="top"*/}
+                    {/*    offsetY={10}*/}
+                    {/*    offsetX={0}*/}
+                    {/*    behavior="hover"*/}
+                    {/*    renderContent={() => (*/}
+                    {/*        <div>*/}
+                    {/*            Lorem Ipsum is simply dummy text of the printing and typesetting*/}
+                    {/*            industry. Lorem Ipsum has been the industry's standard dummy text*/}
+                    {/*            ever*/}
+                    {/*        </div>*/}
+                    {/*    )}*/}
+                    {/*>*/}
                         <div className={`${icon} ${icon02}`}><Plus/></div>
-                    </Tooltip>
-                    <Tooltip
-                        position="top"
-                        offsetY={10}
-                        offsetX={0}
-                        behavior="hover"
-                        renderContent={() => (
-                            <div>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text
-                                ever
-                            </div>
-                        )}
-                    >
+                    {/*</Tooltip>*/}
+                    {/*<Tooltip*/}
+                    {/*    position="top"*/}
+                    {/*    offsetY={10}*/}
+                    {/*    offsetX={0}*/}
+                    {/*    behavior="hover"*/}
+                    {/*    renderContent={() => (*/}
+                    {/*        <div>*/}
+                    {/*            Lorem Ipsum is simply dummy text of the printing and typesetting*/}
+                    {/*            industry. Lorem Ipsum has been the industry's standard dummy text*/}
+                    {/*            ever*/}
+                    {/*        </div>*/}
+                    {/*    )}*/}
+                    {/*>*/}
                         <div className={`${icon} ${icon03}`}><Plus/></div>
-                    </Tooltip>
+                    {/*</Tooltip>*/}
                 </div>
             </div>
         </div>

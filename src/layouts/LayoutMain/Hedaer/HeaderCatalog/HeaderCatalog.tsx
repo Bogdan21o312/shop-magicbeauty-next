@@ -1,19 +1,12 @@
 import {tabsData} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalogItems";
 import {
     main,
-    catalogBodyItems,
-    catalogItems,
     catalogBodyItem,
-    catalogItem,
     catalogBodyLink,
-    catalogBody,
-    catalog,
     mainContainer,
-    active,
     catalogBodySubItem,
     catalogBodySubLink,
     catalogBodySubList,
-    catalogBodyItemList
 } from "./HeaderCatalog.module.scss"
 import Link from "next/link";
 import {CatalogTabs} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/CatalogTabs";
@@ -30,7 +23,7 @@ export const HeaderCatalog = () => {
                         content: (
                             <>
                                 {content.map(({id: linkId, text}) => (
-                                    <li className={catalogBodyItem}>
+                                    <li key={linkId} className={catalogBodyItem}>
                                         <Link className={catalogBodyLink} key={linkId} href={`#${linkId}`}>
                                             {text}
                                         </Link>
@@ -42,8 +35,8 @@ export const HeaderCatalog = () => {
                             <>
                                 <ul className={catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} key={linkId} href={`#${linkId}`}>
+                                        <li key={linkId} className={catalogBodySubItem}>
+                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
@@ -51,8 +44,8 @@ export const HeaderCatalog = () => {
                                 </ul>
                                 <ul className={catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} key={linkId} href={`#${linkId}`}>
+                                        <li key={linkId} className={catalogBodySubItem}>
+                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
@@ -60,8 +53,8 @@ export const HeaderCatalog = () => {
                                 </ul>
                                 <ul className={catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} key={linkId} href={`#${linkId}`}>
+                                        <li key={linkId} className={catalogBodySubItem}>
+                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
@@ -69,8 +62,8 @@ export const HeaderCatalog = () => {
                                 </ul>
                                 <ul className={catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} key={linkId} href={`#${linkId}`}>
+                                        <li key={linkId} className={catalogBodySubItem}>
+                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
@@ -78,8 +71,8 @@ export const HeaderCatalog = () => {
                                 </ul>
                                 <ul className={catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
-                                        <li className={catalogBodySubItem}>
-                                            <Link className={catalogBodySubLink} key={linkId} href={`#${linkId}`}>
+                                        <li key={linkId} className={catalogBodySubItem}>
+                                            <Link className={catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
                                             </Link>
                                         </li>
