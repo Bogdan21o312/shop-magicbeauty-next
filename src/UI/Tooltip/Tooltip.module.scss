@@ -1,0 +1,97 @@
+@import "src/assets/styles/style";
+
+@mixin caret-base {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: $ColorWhite;
+}
+
+.container {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.behavior {
+  &_hover {
+    & div[id='tooltipID'] {
+      opacity: 0;
+    }
+    &:hover {
+      & div[id='tooltipID'] {
+        opacity: 1;
+        transition-delay: 0.1s;
+      }
+    }
+  }
+  &_click {
+    &_inactive {
+      & div[id='tooltipID'] {
+        opacity: 0;
+      }
+    }
+    &_active {
+      & div[id='tooltipID'] {
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+.tooltip {
+  min-width: 200px;
+  position: absolute;
+  background-color: $ColorWhite;
+  border: 1px solid $ColorMain;
+  border-radius: 4px;
+  transition: opacity 200ms linear;
+  &_content {
+    position: relative;
+    padding: 14px;
+    border-color: inherit;
+  }
+  &_position_top {
+    &::before {
+      @include caret-base;
+      border-bottom: 1px solid;
+      border-right: 1px solid;
+      border-color: inherit;
+      bottom: -7px;
+      left: 4px;
+    }
+  }
+  &_position_left {
+    &::before {
+      @include caret-base;
+      border-top: 1px solid;
+      border-right: 1px solid;
+      border-color: inherit;
+      right: -4px;
+      top: 10%;
+    }
+  }
+  &_position_right {
+    &::before {
+      @include caret-base;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      border-color: inherit;
+      left: -4px;
+      top: 10%;
+    }
+  }
+  &_position_bottom {
+    &::before {
+      @include caret-base;
+      border-top: 1px solid;
+      border-left: 1px solid;
+      border-color: inherit;
+      top: -7px;
+      left: 10%;
+    }
+  }
+}

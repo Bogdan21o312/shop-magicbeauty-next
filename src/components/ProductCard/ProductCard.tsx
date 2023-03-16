@@ -1,7 +1,7 @@
 import {FC} from "react";
 import {IProductCard} from "@/components/ProductCard/IProductCard";
 import {main, clImage, numberReviews, priceNum, priceLove, clPrice, clName, flex, clSize, mainLine, blockText, mainImage} from "./ProductCard.module.scss"
-import {Button, Ibg, StarRating, Text} from "@/ui";
+import {Button, Ibg, StarRating, Text} from "@/UI";
 import {Cart, Love} from "@/assets/config";
 
 export const ProductCard: FC<IProductCard> = ({

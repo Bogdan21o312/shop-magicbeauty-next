@@ -1,6 +1,6 @@
 
 export interface IProductCard {
-    imageSrc: string
+    imageSrc: string | object
     imageAlt: string
     title: string
     size: string

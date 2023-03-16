@@ -1,0 +1,12 @@
+@import "src/assets/styles/style";
+
+.main {
+  max-width: rem(2560);
+  padding-right: rem(20);
+  padding-left: rem(20);
+  margin: 0 auto;
+  @media (max-width: em(600)){
+    padding-right: rem(10);
+    padding-left: rem(10);
+  }
+}

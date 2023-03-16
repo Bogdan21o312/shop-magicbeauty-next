@@ -3,8 +3,6 @@ import {Autoplay, Navigation, Pagination} from "swiper";
 import {} from "./Slider.module.scss"
 import Image from "../../assets/images/test.jpeg"
 import "swiper/css";
-// import "swiper/css/pagination";
-import {useRef} from "react";
 import {ProductCard} from "@/components";
 
 export const Slider = () => {

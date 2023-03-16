@@ -1,6 +1,6 @@
 import React, {ElementType} from 'react';
 import {clMain, clTitleBig, clTitle, clTitleSub, clText, clTextSmall, clLink, clCenter, clOpacity, clLight} from "./Text.module.scss";
-import {defaultElementText, ITextProps} from "@/ui/Text/IText";
+import {defaultElementText, ITextProps} from "@/UI/Text/IText";
 
 export const Text = <E extends ElementType = typeof defaultElementText>({as, title, text, children, center, link, subTitle, opacity, light, smallText, titleBig, ...otherProps}: ITextProps<E>) => {
     const TagName = as || defaultElementText;

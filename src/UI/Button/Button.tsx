@@ -1,6 +1,6 @@
 import {main, clSecondary, clPrimary, clWidthHundredPercent} from "./Button.module.scss"
 import {ElementType} from "react";
-import {defaultElementButton, IButtonProps} from "@/ui/Button/IButton";
+import {defaultElementButton, IButtonProps} from "@/UI/Button/IButton";
 
 
 export const Button = <E extends ElementType = typeof defaultElementButton>({as, text, icon, primary, secondary, widthHundredPercent, ...otherProps} :IButtonProps<E>) => {

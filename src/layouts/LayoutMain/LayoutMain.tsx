@@ -1,6 +1,7 @@
 import {FC, ReactNode} from "react";
 import {Header} from "@/layouts/LayoutMain/Hedaer";
 import {Footer} from "@/layouts/LayoutMain/Footer";
+import {Section} from "@/layouts/LayoutMain/Section";
 
 
 interface LayoutMainProps {
@@ -11,9 +12,9 @@ export const LayoutMain: FC<LayoutMainProps> = ({children}) => {
     return (
         <>
             <Header/>
-            <main>
+            <Section>
                 {children}
-            </main>
+            </Section>
             <Footer/>
         </>
     );

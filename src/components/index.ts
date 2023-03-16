@@ -1,5 +1,7 @@
 import {ProductCard} from "@/components/ProductCard";
+import {ContainerW100P} from "@/components/ContainerW100P";
 
 export {
-    ProductCard
+    ProductCard,
+    ContainerW100P
 }

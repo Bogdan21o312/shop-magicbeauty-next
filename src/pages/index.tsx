@@ -2,12 +2,18 @@ import Head from 'next/head'
 import {Inter} from 'next/font/google'
 import {useState} from "react";
 import {useStarRating} from "@/hooks";
-import {Button} from "@/ui";
+import {Button} from "@/UI";
 import {ProductCard} from "@/components";
 import Image from "../assets/images/test.jpeg"
 import {Slider} from "@/components/Slider";
 
 export default function Home() {
+
+    const second = 1000
+    const minutes = 1000 * 60
+    const hours = minutes * 600
+    const days = hours * 24
+
 
     const [rating, setRating] = useState(0);
 
@@ -17,7 +23,7 @@ export default function Home() {
 
     return (
         <div style={{paddingTop: 300}}>
-            <Slider/>
+            {/*<Slider/>*/}
         </div>
     )
 }
