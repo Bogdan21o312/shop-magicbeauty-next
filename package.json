@@ -26,7 +26,6 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
-    "@babel/plugin-transform-arrow-functions": "^7.20.7",
     "@svgr/webpack": "^6.5.1"
   }
 }
