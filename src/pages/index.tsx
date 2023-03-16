@@ -5,7 +5,7 @@ import {useStarRating} from "@/hooks";
 import {Button} from "@/UI";
 import {ProductCard} from "@/components";
 import Image from "../assets/images/test.jpeg"
-import {Slider} from "@/components/Slider";
+import {SwiperSlider} from "@/modules/Slider/components/SwiperSlider";
 
 export default function Home() {
 
@@ -23,7 +23,7 @@ export default function Home() {
 
     return (
         <div style={{paddingTop: 300}}>
-            {/*<Slider/>*/}
+            {/*<SwiperSlider/>*/}
         </div>
     )
 }

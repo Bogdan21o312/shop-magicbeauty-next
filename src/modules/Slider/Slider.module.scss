@@ -1,0 +1,6 @@
+@import "src/assets/styles/style";
+
+.main {
+  @include adaptiveValue("padding-top", 40, 20);
+  @include adaptiveValue("padding-bottom", 40, 20);
+}

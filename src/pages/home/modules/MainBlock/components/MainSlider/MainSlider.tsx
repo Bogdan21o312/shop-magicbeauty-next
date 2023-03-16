@@ -5,7 +5,7 @@ import "swiper/css";
 
 import {button, text, title, main} from "./MainSlider.module.scss"
 import {FC} from "react";
-import {IMainSlider} from "@/pages/home/modules/MainBlock/componets/MainSlider/IMainSlider";
+import {IMainSlider} from "@/pages/home/modules/MainBlock/components/MainSlider/IMainSlider";
 
 export const MainSlider: FC<IMainSlider> = ({data}) => {
     return (
