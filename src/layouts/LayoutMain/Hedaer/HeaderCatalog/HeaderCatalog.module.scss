@@ -7,8 +7,6 @@
 
 .mainContainer {
   max-width: rem(2560);
-  padding-right: rem(50);
-  padding-left: rem(50);
 }
 
 .catalog {
@@ -50,7 +48,9 @@
 }
 
 .catalogBody {
+  background-color: $ColorWhite;
   min-width: 100%;
+  z-index: 50;
   position: absolute;
 }
 

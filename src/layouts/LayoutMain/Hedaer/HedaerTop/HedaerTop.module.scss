@@ -1,13 +1,53 @@
 @import "src/assets/styles/style";
 
 .top {
+  display: flex;
   text-align: center;
+  justify-content: space-around;
   background-color: $ColorMain;
   @include adaptiveValue("font-size", 14, 10);
-  padding: rem(5);
+  padding: rem(10);
   color: $ColorWhite;
+  padding-right: rem(20);
+  padding-left: rem(20);
+}
 
-  span {
-    max-width: rem(1920);
+.content {
+
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveValue("gap", 60, 20);
+}
+
+.item {
+  transition: all 0.3s ease 0s;
+  padding: rem(5);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $ColorWhite;
+      color: $ColorMain;
+    }
+  }
+}
+
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+}
+
+.text {
+  transition: all 0.3s ease 0s;
+  padding: rem(5);
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $ColorWhite;
+      color: $ColorMain;
+    }
   }
 }
