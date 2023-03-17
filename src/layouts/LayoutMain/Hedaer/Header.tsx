@@ -11,7 +11,7 @@ export const Header = () => {
             <div className={classes.headerContent}>
                 <HeaderCenter/>
             </div>
-            {/*<HeaderCatalog/>*/}
+            <HeaderCatalog/>
         </header>
     );
 };
