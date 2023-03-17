@@ -1,7 +1,6 @@
-import {Slider} from "@/modules/Slider/Slider";
-import {MainBlock} from "@/modules";
+import {MainBlock, Slider} from "@/modules";
 
-export default function index() {
+export const Home = () => {
     return (
         <div style={{paddingTop: '400px'}}>
             <MainBlock/>
