@@ -7,9 +7,9 @@ import {HeaderCatalog} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog";
 export const Header = () => {
     return (
         <header className={classes.header}>
-            {/*<HeaderTop/>*/}
+            <HeaderTop/>
             <div className={classes.headerContent}>
-                {/*<HeaderCenter/>*/}
+                <HeaderCenter/>
             </div>
             {/*<HeaderCatalog/>*/}
         </header>
