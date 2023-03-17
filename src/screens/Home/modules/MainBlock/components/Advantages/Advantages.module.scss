@@ -1,0 +1,43 @@
+@use "sass:math";
+@import "../../../../../../assets/styles/style";
+
+.main {
+  position: relative;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: rem(40);
+  row-gap: rem(20);
+  @media (max-width: em(1200)){
+      justify-content: center;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: rem(300);
+}
+
+.icon {
+  path {
+    fill: $ColorDark;
+  }
+}
+
+.text {
+  margin-top: rem(10);
+  font-weight: 600;
+  font-size: rem(20);
+  line-height: math.div(32, 20);
+  text-align: center;
+  @media (max-width: em(1200)){
+    font-size: rem(18);
+  }
+}

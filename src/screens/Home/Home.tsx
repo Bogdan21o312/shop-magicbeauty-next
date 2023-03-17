@@ -1,4 +1,4 @@
-import {MainBlock, Slider} from "@/modules";
+import {MainBlock, Slider} from "@/screens/Home/modules";
 
 export const Home = () => {
     return (

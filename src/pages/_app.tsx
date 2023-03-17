@@ -3,7 +3,7 @@ import type {AppProps} from 'next/app'
 import {Provider} from "react-redux";
 import {setupStore} from "@/store/store";
 import {LayoutMain} from "@/layouts/LayoutMain";
-import {Header} from "@/layouts/LayoutMain/Hedaer";
+import "../assets/styles/globals.scss"
 
 const store = setupStore()
 
