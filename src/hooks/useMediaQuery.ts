@@ -1,35 +1,17 @@
-import {useEffect, useState} from "react";
+import { useState, useEffect } from "react";
 
-export const useMediaQuery = (initalQuery: string) => {
-    const [query, setQuery] = useState(initalQuery);
+export const useMediaQuery = () => {
     const [matches, setMatches] = useState(false);
 
-    // check query and listen for media change.
     useEffect(() => {
-        if (!query) return;
-
-        const _onChange = (mql: MediaQueryListEvent) => {
-            setMatches(mql.matches);
-        };
-
-        const mql = window.matchMedia(query);
-
-        setMatches(mql.matches);
-
-        try {
-            mql.addEventListener("change", _onChange);
-        } catch {
-            mql.addListener(_onChange);
+        const media = window.matchMedia('(max-width: 1200px)');
+        if (media.matches !== matches) {
+            setMatches(media.matches);
         }
+        const listener = () => setMatches(media.matches);
+        window.addEventListener("resize", listener);
+        return () => window.removeEventListener("resize", listener);
+    }, [matches]);
 
-        return () => {
-            try {
-                mql.removeEventListener("change", _onChange);
-            } catch {
-                mql.removeListener(_onChange);
-            }
-        };
-    }, [query]);
-
-    return [matches, setQuery] as const;
+    return matches;
 }
