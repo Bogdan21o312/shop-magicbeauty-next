@@ -1,0 +1,26 @@
+@import "../../../../../../../assets/styles/style";
+
+.main {
+
+}
+
+.image {
+
+}
+
+.ibg {
+  padding-bottom: percent(300, 225);
+}
+
+.textBlock {
+  padding: rem(20) rem(36);
+  div {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+}
+
+.data {
+
+}

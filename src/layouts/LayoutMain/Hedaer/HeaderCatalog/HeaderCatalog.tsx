@@ -2,8 +2,11 @@ import {tabsData} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalogI
 import classes from "./HeaderCatalog.module.scss"
 import Link from "next/link";
 import {CatalogTabs} from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/CatalogTabs";
+import {useIsTouchDevice, useMediaQuery} from "@/app/hooks";
 
 export const HeaderCatalog = () => {
+    const isTouch = useIsTouchDevice()
+    const matches = useMediaQuery()
 
     return (
         <div className={classes.main}>

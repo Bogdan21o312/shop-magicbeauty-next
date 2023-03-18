@@ -1,0 +1,75 @@
+@use "sass:math";
+@import "../../../../../assets/styles/style";
+
+.main {
+  position: relative;
+  overflow-x: hidden;
+  @include adaptiveValue("padding-top", 44, 30);
+  width: calc(100% + rem(40));
+  margin-left: rem(-20);
+  padding-right: rem(20);
+  padding-left: rem(20);
+  @media (max-width: em(600)) {
+    width: calc(100% + rem(20));
+    margin-left: rem(-10);
+    padding-right: rem(10);
+    padding-left: rem(10);
+  }
+
+}
+
+.title {
+  position: relative;
+  padding-top: rem(40);
+  padding-bottom: rem(20);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-right: rem(100);
+  gap: rem(60);
+  @media (max-width: em(1300)) {
+    gap: rem(50);
+  }
+  @media (max-width: em(1200)) {
+    flex-direction: column;
+    margin-right: 0;
+    gap: rem(30);
+  }
+
+}
+
+.slider {
+  max-width: rem(700);
+  width: 100%;
+  @media (max-width: em(1200)) {
+    max-width: none;
+  }
+
+}
+
+.image {
+  min-width: rem(400);
+  @media (max-width: em(1200)) {
+    min-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  padding-top: rem(120);
+  padding-bottom: rem(64);
+  @media (max-width: em(1200)){
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+}
+
+.mainImage {
+  width: auto;
+}
+
+.mainImageIbg {
+  width: auto;
+}

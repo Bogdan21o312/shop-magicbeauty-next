@@ -1,4 +1,4 @@
-import {useIsTouchDevice, useMediaQuery} from "@/hooks";
+import {useIsTouchDevice, useMediaQuery} from "@/app/hooks";
 import {HeaderCenterMobile} from "@/layouts/LayoutMain/Hedaer/HedaerCenter/HeaderCenterMobile";
 import {HeaderCenterDesktop} from "@/layouts/LayoutMain/Hedaer/HedaerCenter/HeaderCenterDesktop";
 

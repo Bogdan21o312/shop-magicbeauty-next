@@ -9,7 +9,7 @@ export const HeaderCenterDesktop = () => {
                 LOGO
             </div>
             <div className={classes.search}>
-                <form action="#" className={classes.searchForm}>
+                <form action="@/app/layouts/LayoutMain/Hedaer/HedaerCenter/HeaderCenterDesktop/HeaderCenterDesktop#" className={classes.searchForm}>
                     <button className={classes.searchButton}>
                         <Search/>
                     </button>
@@ -17,7 +17,7 @@ export const HeaderCenterDesktop = () => {
                 </form>
             </div>
             <div className={classes.actions}>
-                <Link href='#' className={classes.actionsLocation}>
+                <Link href='@/app/layouts/LayoutMain/Hedaer/HedaerCenter/HeaderCenterDesktop/HeaderCenterDesktop#' className={classes.actionsLocation}>
                     <div className={classes.actionsLocationIcon}>
                         <Location/>
                     </div>

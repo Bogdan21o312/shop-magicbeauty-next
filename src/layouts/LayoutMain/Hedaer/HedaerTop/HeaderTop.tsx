@@ -1,6 +1,6 @@
 import classes from "./HedaerTop.module.scss"
 import Link from "next/link";
-import {Button} from "@/UI";
+import {Button} from "@/app/UI";
 
 export const HeaderTop = () => {
 

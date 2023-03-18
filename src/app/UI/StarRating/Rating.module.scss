@@ -1,0 +1,15 @@
+@import "../../../assets/styles/style";
+
+.star {
+  path {
+    stroke: $ColorMain;
+  }
+  &.clFilled {
+
+    path {
+      stroke: $ColorMain;
+      fill: $ColorMain;
+    }
+  }
+}
+

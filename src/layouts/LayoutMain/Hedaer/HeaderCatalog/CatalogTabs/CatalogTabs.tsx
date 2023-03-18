@@ -1,5 +1,5 @@
 import {FC, useEffect} from 'react';
-import {useTabsToggle} from "@/hooks/useTabToggle";
+import {useTabsToggle} from "@/app/hooks/useTabToggle";
 import classes from "@/layouts/LayoutMain/Hedaer/HeaderCatalog/HeaderCatalog.module.scss";
 
 interface Tab {
