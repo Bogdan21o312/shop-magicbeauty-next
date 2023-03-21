@@ -1,19 +1,15 @@
-import '@/assets/styles/globals.scss'
-import type {AppProps} from 'next/app'
-import {Provider} from "react-redux";
-import {setupStore} from "@/app/store/store";
-import {LayoutMain} from "@/layouts/LayoutMain";
+import type {AppProps} from "next/app";
+import {wrapper} from "@/app/store/store";
 import "../assets/styles/globals.scss"
+import {LayoutMain} from "@/app/layouts";
 
-const store = setupStore()
 
-
-export default function App({Component, pageProps}: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
     return (
-        <Provider store={store}>
-            <LayoutMain>
-                <Component {...pageProps} />
-            </LayoutMain>
-        </Provider>
+        <LayoutMain>
+            <Component {...pageProps} />
+        </LayoutMain>
     )
 }
+
+export default wrapper.withRedux(MyApp);

@@ -1,0 +1,49 @@
+.inputWrapper {
+  position: relative;
+  margin: 20px auto;
+}
+
+.formControl {
+  display: block;
+  line-height: 2em;
+  margin: 0;
+  padding-left: 10px;
+  width: 100%;
+  font-size: medium;
+  border: 1px solid #f4f4f4;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.formControl:focus {
+  border: 1px solid #2c7ac9;
+}
+
+.controlLabel {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  bottom: 1.9rem;
+  color: #5d5d5d;
+  transition: 0.2s ease-in-out transform;
+  font-size: 12px;
+}
+
+.formControl:placeholder-shown + .controlLabel {
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+}
+
+.formControl:not(:placeholder-shown) + .controlLabel,
+.formControl:focus:not(:placeholder-shown) + .controlLabel {
+  visibility: visible;
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: 0.2s ease-in-out transform;
+}

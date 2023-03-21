@@ -1,10 +1,10 @@
 import {FC} from "react";
-import {IProductCard} from "@/app/components/ProductCard/IProductCard";
+import {IProductCardProps} from "@/app/components/ProductCard/IProductCardProps";
 import classes from "./ProductCard.module.scss"
 import {Button, Ibg, StarRating, Text} from "@/app/UI";
 import {Cart, Love} from "@/assets/config";
 
-export const ProductCard: FC<IProductCard> = ({
+export const ProductCard: FC<IProductCardProps> = ({
                                                   textButton,
                                                   imageAlt,
                                                   numberOFReviews,
@@ -26,21 +26,21 @@ export const ProductCard: FC<IProductCard> = ({
                     <Text  opacity smallText>{size}</Text>
                     <Text opacity smallText>{name}</Text>
                 </div>
-                {rating ?
-                    <div className={classes.flex}>
-                        <StarRating value={numberOFReviews}></StarRating>
-                        <div className={classes.numberReviews}>{numberOFReviews}</div>
-                    </div>
-                    :
-                    null
-                }
+                {/*{rating ?*/}
+                {/*    <div className={classes.flex}>*/}
+                {/*        <StarRating value={numberOFReviews}></StarRating>*/}
+                {/*        <div className={classes.numberReviews}>{numberOFReviews}</div>*/}
+                {/*    </div>*/}
+                {/*    :*/}
+                {/*    null*/}
+                {/*}*/}
             </div>
             <div className={classes.mainLine}></div>
             <div className={classes.clPrice}>
                 <div className={classes.priceNum}>{price} грн.</div>
                 <button className={classes.priceLove}><Love/></button>
             </div>
-            <Button as={'button'} widthHundredPercent text={textButton} icon={<Cart/>}/>
+            <Button as={'button'} widthHundredPercent text={"Купити"} icon={<Cart/>}/>
         </div>
     );
 };
