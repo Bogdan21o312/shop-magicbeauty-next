@@ -4,6 +4,7 @@ import {Text} from "@/app/UI/Text/Text";
 import {Ibg} from "@/app/UI/Ibg";
 import {Input} from "./Input"
 import {ModalWindow} from "@/app/UI/ModalWindow";
+import {Accordion} from "@/app/UI/Accordion";
 
 export {
     Button,
@@ -11,5 +12,6 @@ export {
     Text,
     Ibg,
     Input,
-    ModalWindow
+    ModalWindow,
+    Accordion
 }
