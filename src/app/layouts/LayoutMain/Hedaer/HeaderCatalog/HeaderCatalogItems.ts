@@ -5,23 +5,23 @@ export const tabsData = [
         "content": [
             {
                 "id": "link1",
-                "text": "Link 1"
+                "text": "CustomLink 1"
             },
             {
                 "id": "link1",
-                "text": "Link 1"
+                "text": "CustomLink 1"
             },
             {
                 "id": "link1",
-                "text": "Link 1"
+                "text": "CustomLink 1"
             },
             {
                 "id": "link1",
-                "text": "Link 1"
+                "text": "CustomLink 1"
             },
             {
                 "id": "link2",
-                "text": "Link 2"
+                "text": "CustomLink 2"
             }
         ]
     },
@@ -31,11 +31,11 @@ export const tabsData = [
         "content": [
             {
                 "id": "link3",
-                "text": "Link 3"
+                "text": "CustomLink 3"
             },
             {
                 "id": "link4",
-                "text": "Link 4"
+                "text": "CustomLink 4"
             }
         ]
     },
@@ -45,11 +45,11 @@ export const tabsData = [
         "content": [
             {
                 "id": "link5",
-                "text": "Link 5"
+                "text": "CustomLink 5"
             },
             {
                 "id": "link6",
-                "text": "Link 6"
+                "text": "CustomLink 6"
             }
         ]
     },
@@ -59,11 +59,11 @@ export const tabsData = [
         "content": [
             {
                 "id": "link5",
-                "text": "Link 5"
+                "text": "CustomLink 5"
             },
             {
                 "id": "link6",
-                "text": "Link 6"
+                "text": "CustomLink 6"
             }
         ]
     },
@@ -73,11 +73,11 @@ export const tabsData = [
         "content": [
             {
                 "id": "link5",
-                "text": "Link 5"
+                "text": "CustomLink 5"
             },
             {
                 "id": "link6",
-                "text": "Link 6"
+                "text": "CustomLink 6"
             }
         ]
     }

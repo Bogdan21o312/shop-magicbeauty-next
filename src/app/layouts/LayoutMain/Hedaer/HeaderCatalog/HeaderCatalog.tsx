@@ -3,6 +3,7 @@ import classes from "./HeaderCatalog.module.scss"
 import Link from "next/link";
 import {CatalogTabs} from "@/app/layouts/LayoutMain/Hedaer/HeaderCatalog/CatalogTabs";
 import {useIsTouchDevice, useMediaQuery} from "@/app/hooks";
+import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
 
 export const HeaderCatalog = () => {
     const isTouch = useIsTouchDevice()
@@ -19,9 +20,9 @@ export const HeaderCatalog = () => {
                             <>
                                 {content.map(({id: linkId, text}) => (
                                     <li key={linkId} className={classes.catalogBodyItem}>
-                                        <Link className={classes.catalogBodyLink} key={linkId} href={`#${linkId}`}>
+                                        <CustomLink className={classes.catalogBodyLink} key={linkId} href={`#${linkId}`}>
                                             {text}
-                                        </Link>
+                                        </CustomLink>
                                     </li>
                                 ))}
                             </>
@@ -31,45 +32,45 @@ export const HeaderCatalog = () => {
                                 <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
                                         <li key={linkId} className={classes.catalogBodySubItem}>
-                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
+                                            <CustomLink className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
-                                            </Link>
+                                            </CustomLink>
                                         </li>
                                     ))}
                                 </ul>
                                 <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
                                         <li key={linkId} className={classes.catalogBodySubItem}>
-                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
+                                            <CustomLink className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
-                                            </Link>
+                                            </CustomLink>
                                         </li>
                                     ))}
                                 </ul>
                                 <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
                                         <li key={linkId} className={classes.catalogBodySubItem}>
-                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
+                                            <CustomLink className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
-                                            </Link>
+                                            </CustomLink>
                                         </li>
                                     ))}
                                 </ul>
                                 <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
                                         <li key={linkId} className={classes.catalogBodySubItem}>
-                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
+                                            <CustomLink className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
-                                            </Link>
+                                            </CustomLink>
                                         </li>
                                     ))}
                                 </ul>
                                 <ul className={classes.catalogBodySubList}>
                                     {content.map(({id: linkId, text}) => (
                                         <li key={linkId} className={classes.catalogBodySubItem}>
-                                            <Link className={classes.catalogBodySubLink} href={`#${linkId}`}>
+                                            <CustomLink className={classes.catalogBodySubLink} href={`#${linkId}`}>
                                                 {text}
-                                            </Link>
+                                            </CustomLink>
                                         </li>
                                     ))}
                                 </ul>

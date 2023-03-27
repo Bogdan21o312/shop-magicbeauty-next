@@ -1,0 +1,7 @@
+export const HOME_PAGE = '/'
+export const CATEGORIES_PAGE = 'categories'
+export const CHECKOUT_PAGE = 'checkout'
+export const ABOUT_PAGE = 'about'
+export const NEWS_PAGE = 'news'
+export const CONTACT_PAGE = 'contact'
+export const PAYMENT_AND_DELIVERY_PAGE = 'payment-and-delivery'

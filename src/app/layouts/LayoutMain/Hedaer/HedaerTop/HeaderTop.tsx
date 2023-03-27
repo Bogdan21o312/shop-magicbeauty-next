@@ -1,14 +1,23 @@
 import classes from "./HedaerTop.module.scss"
 import Link from "next/link";
 import {Button} from "@/app/UI";
+import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
+import {
+    ABOUT_PAGE,
+    CATEGORIES_PAGE,
+    CONTACT_PAGE,
+    NEWS_PAGE,
+    PAYMENT_AND_DELIVERY_PAGE
+} from "@/app/routes/mainPageRoutes";
 
 export const HeaderTop = () => {
 
     const data = [
-        {text: "Про нас"},
-        {text: "Оплата і доставка"},
-        {text: "Новини"},
-        {text: "Контактна інформація"}
+        {text: "Про нас", href: ABOUT_PAGE},
+        {text: "Оплата і доставка", href: PAYMENT_AND_DELIVERY_PAGE},
+        {text: "Новини", href: NEWS_PAGE},
+        {text: "Контактна інформація", href: CONTACT_PAGE},
+        {text: "Категорії", href: CATEGORIES_PAGE}
     ]
 
     return (
@@ -17,7 +26,7 @@ export const HeaderTop = () => {
                 <ul className={classes.list}>
                     {data.map(item =>
                         <li key={item.text} className={classes.item}>
-                            <Link href={"#"}>{item.text}</Link>
+                            <CustomLink className={classes.link} href={item.href}>{item.text}</CustomLink>
                         </li>
                     )}
                 </ul>

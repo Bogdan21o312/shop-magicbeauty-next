@@ -26,20 +26,21 @@
   }
 
   &Close {
-    transform: rotate(45deg);
-    transition: all 0.3s ease 0s;
+    @include adaptiveValue("width", 40, 30);
+    @include adaptiveValue("height", 40, 30);
     svg {
-      @include adaptiveValue("width", 40, 30);
-      @include adaptiveValue("height", 40, 30);
+      transform: rotate(45deg);
+      transition: all 0.3s ease 0s;
     }
-
     path {
       transition: all 0.3s ease 0s;
     }
 
     @media (any-hover: hover) {
       &:hover {
-        transform: rotate(135deg);
+        svg {
+          transform: rotate(135deg);
+        }
         path {
           fill: $ColorMain !important;
         }

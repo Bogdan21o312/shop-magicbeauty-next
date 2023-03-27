@@ -4,6 +4,7 @@ import {ITitlesTop} from "@/app/screens/Home/modules/Slider/components/TitlesTop
 import Link from "next/link";
 import {IconArrow} from "@/assets/config";
 import classes from "./TitlesTop.module.scss"
+import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
 
 export const TitlesTop:FC<ITitlesTop> = ({title, link, linkText}) => {
     return (
@@ -12,12 +13,12 @@ export const TitlesTop:FC<ITitlesTop> = ({title, link, linkText}) => {
                 <div className={classes.text}>
                     <Text as={'h2'} title>{title}</Text>
                 </div>
-                <Link href={link} className={classes.clLink}>
+                <CustomLink href={link} className={classes.clLink}>
                     <Text subTitle opacity>
                         {linkText}
                     </Text>
                     <IconArrow/>
-                </Link>
+                </CustomLink>
             </div>
         </div>
     );

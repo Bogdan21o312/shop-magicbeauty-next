@@ -4,11 +4,11 @@ import {IconLocation} from "@/assets/config";
 
 export const ActionsLocation = () => {
     return (
-        <Link href='#' className={classes.actionsLocation}>
+        <a href='#' className={classes.actionsLocation}>
             <div className={classes.actionsLocationIcon}>
                 <IconLocation/>
             </div>
             <div className={classes.actionsLocationText}>Тернопіль</div>
-        </Link>
+        </a>
     );
 };

@@ -3,6 +3,7 @@ import {IconCart} from "@/assets/config";
 import {useState} from "react";
 import dynamic from "next/dynamic";
 import {Loader} from "@/app/UI";
+import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
 const ModalWindow = dynamic(() => import('@/app/UI').then((mod) => mod.ModalWindow), {
     ssr: false,
     loading: () => <Loader/>,
@@ -21,16 +22,16 @@ export const Cart = () => {
                     <p>This is the content of the modal window.</p>
                 </ModalWindow>
             )}
-            <button onClick={showModal} className={classes.cart}>
-                <div className={classes.cartIcon}>
+            <div className={classes.cart}>
+                <button onClick={showModal} className={classes.cartIcon}>
                     <IconCart/>
                     <span>0</span>
-                </div>
+                </button>
                 <div className={classes.cartBody}>
                     <div className={classes.cartBodySum}>0 грн.</div>
-                    <div className={classes.cartBodyLink}>Оформити замовлення</div>
+                    <CustomLink href={'checkout'} className={classes.cartBodyLink}>Оформити замовлення</CustomLink>
                 </div>
-            </button>
+            </div>
         </>
     );
 };
