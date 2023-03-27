@@ -4,4 +4,5 @@ export interface IModalWindow {
     children: ReactNode
     visible: boolean
     setVisible?: any
+    title: string
 }

@@ -1,6 +1,6 @@
 import {FC, useState} from "react";
 import {IAccordion} from "@/app/UI/Accordion/IAccordion";
-import {Arrow} from "@/assets/config";
+import {IconArrow} from "@/assets/config";
 import classes from "./Accordion.module.scss"
 
 export const Accordion: FC<IAccordion> = ({items, defaultActive, children}) => {
@@ -38,7 +38,7 @@ export const Accordion: FC<IAccordion> = ({items, defaultActive, children}) => {
                         onClick={() => onAccordionClick(item.id)}
                     >
                         <h3>{item.title}</h3>
-                        <span className={`${classes.arrow} ${activeIndexes.includes(item.id) ? classes.active : ''}`}><Arrow/></span>
+                        <span className={`${classes.arrow} ${activeIndexes.includes(item.id) ? classes.active : ''}`}><IconArrow/></span>
                     </div>
                     <div
                         className={`${classes.accordionContent} ${activeIndexes.includes(item.id) ? classes.active : ''}`}>

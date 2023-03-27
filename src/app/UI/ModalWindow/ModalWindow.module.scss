@@ -2,16 +2,49 @@
 
 .modal {
   position: fixed;
+  z-index: 9999;
   top: 0;
   right: 0;
   display: none;
-  background: rgba(0,0,0, 0.25);
-  &Content {
-    @include adaptiveValue("padding", 30, 15);
+  background: rgba(0, 0, 0, 0.25);
+
+  &Body {
+    @include adaptiveValue("padding", 20, 15);
     background-color: white;
     border-radius: rem(10);
-    min-width: rem(250);
+    @include adaptiveValue("min-width", 500, 300);
+
+
     max-width: 80%;
+  }
+
+  &Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("padding-bottom", 40, 20);
+  }
+
+  &Close {
+    transform: rotate(45deg);
+    transition: all 0.3s ease 0s;
+    svg {
+      @include adaptiveValue("width", 40, 30);
+      @include adaptiveValue("height", 40, 30);
+    }
+
+    path {
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: rotate(135deg);
+        path {
+          fill: $ColorMain !important;
+        }
+      }
+    }
   }
 }
 

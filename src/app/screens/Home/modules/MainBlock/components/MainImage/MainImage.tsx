@@ -1,6 +1,6 @@
 import {Ibg} from "@/app/UI";
 import classes from "./MainImage.module.scss"
-import {Plus} from "@/assets/config";
+import {IconPlus} from "@/assets/config";
 import {FC} from "react";
 import {IMainImage} from "@/app/screens/Home/modules/MainBlock/components/MainImage/IMainImage";
 import {Tooltip} from "@/app/UI/Tooltip";
@@ -26,7 +26,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${classes.icon} ${classes.icon01}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon01}`}><IconPlus/></div>
                     {/*</Tooltip>*/}
                     {/*<Tooltip*/}
                     {/*    position="top"*/}
@@ -41,7 +41,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${classes.icon} ${classes.icon02}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon02}`}><IconPlus/></div>
                     {/*</Tooltip>*/}
                     {/*<Tooltip*/}
                     {/*    position="top"*/}
@@ -56,7 +56,7 @@ export const MainImage: FC<IMainImage> = ({mainImage, mainAlt}) => {
                     {/*        </div>*/}
                     {/*    )}*/}
                     {/*>*/}
-                        <div className={`${classes.icon} ${classes.icon03}`}><Plus/></div>
+                        <div className={`${classes.icon} ${classes.icon03}`}><IconPlus/></div>
                     {/*</Tooltip>*/}
                 </div>
             </div>

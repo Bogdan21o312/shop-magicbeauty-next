@@ -1,27 +1,27 @@
-import Arrow from "./icons/arrow.svg"
-import Cart from "./icons/cart.svg"
-import Location from "./icons/location.svg"
-import Love from "./icons/love.svg"
-import Search from "./icons/search.svg"
-import Suitcase from "./icons/suitcase.svg"
-import Star from "./icons/star.svg"
-import Plus from "./icons/plus.svg"
-import Cargo from "./icons/cargo.svg"
-import Choose from  "./icons/choose.svg"
-import SuccessMark from "./icons/success-mark.svg"
-import DiscountMark from "./icons/discount-mark.svg"
+import IconArrow from "./icons/arrow.svg"
+import IconCart from "./icons/cart.svg"
+import IconLocation from "./icons/location.svg"
+import IconLove from "./icons/love.svg"
+import IconSearch from "./icons/search.svg"
+import IconSuitcase from "./icons/suitcase.svg"
+import IconStar from "./icons/star.svg"
+import IconPlus from "./icons/plus.svg"
+import IconCargo from "./icons/cargo.svg"
+import IconChoose from  "./icons/choose.svg"
+import IconSuccessMark from "./icons/success-mark.svg"
+import IconDiscountMark from "./icons/discount-mark.svg"
 
 export {
-    Arrow,
-    Cart,
-    Location,
-    Love,
-    Search,
-    Suitcase,
-    Star,
-    Plus,
-    Choose,
-    Cargo,
-    SuccessMark,
-    DiscountMark
+    IconArrow,
+    IconCart,
+    IconLocation,
+    IconLove,
+    IconSearch,
+    IconSuitcase,
+    IconStar,
+    IconPlus,
+    IconChoose,
+    IconCargo,
+    IconSuccessMark,
+    IconDiscountMark
 }

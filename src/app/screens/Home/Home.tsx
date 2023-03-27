@@ -2,21 +2,10 @@ import {MainBlock, PostList, Slider} from "@/app/screens/Home/modules";
 import {useIsTouchDevice} from "@/app/hooks";
 import {ProductList} from "@/app/modules";
 import {Accordion, Input} from "@/app/UI";
-import {useFormValidation} from "@/app/hooks/useFormValidation";
 
 export const Home = () => {
     const isTouch = useIsTouchDevice()
 
-    const {
-        values,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        errors,
-        isDisabled,
-        showPassword,
-        setShowPassword,
-    } = useFormValidation();
     const items = [
         {
             id: 1,
