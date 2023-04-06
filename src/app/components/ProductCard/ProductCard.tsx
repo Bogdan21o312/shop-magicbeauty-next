@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useEffect, useState} from "react";
 import {IProductCardProps} from "@/app/components/ProductCard/IProductCardProps";
 import classes from "./ProductCard.module.scss"
 import {Button, Ibg, StarRating, Text} from "@/app/UI";

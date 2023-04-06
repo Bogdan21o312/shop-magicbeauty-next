@@ -3,5 +3,5 @@ export interface IProduct {
     title: string
     capacity: string
     name: string
-    price: number
+    picture: string | File
 }

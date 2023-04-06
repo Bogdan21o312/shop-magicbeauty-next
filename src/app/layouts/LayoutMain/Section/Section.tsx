@@ -7,7 +7,7 @@ interface SectionProps {
 
 export const Section:FC<SectionProps> = ({children}) => {
     return (
-        <section className={classes.main}>
+        <section className={classes.Wrapper}>
             {children}
         </section>
     );

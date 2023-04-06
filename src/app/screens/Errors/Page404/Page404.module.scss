@@ -1,0 +1,22 @@
+@import "src/assets/styles/style";
+
+.main {
+  flex-direction: column;
+}
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.title {
+  color: $ColorMain;
+  font-size: rem(200);
+}
+
+.blockText {
+
+}

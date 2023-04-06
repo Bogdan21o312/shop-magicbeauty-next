@@ -13,7 +13,7 @@ export const FooterCenterTop = () => {
                             <CustomLink href={'#'} className={classes.title}>{column.title}</CustomLink>
                             <ul className={classes.list}>
                                 {column.links.map(item =>
-                                    <li className={classes.item}>
+                                    <li key={item.url} className={classes.item}>
                                         <CustomLink className={classes.link} href={item.url}>{item.text}</CustomLink>
                                     </li>
                                 )}

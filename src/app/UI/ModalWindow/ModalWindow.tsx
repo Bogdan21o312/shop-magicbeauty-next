@@ -33,6 +33,7 @@ export const ModalWindow:FC<IModalWindow> = ({children, visible, setVisible, tit
     }, [visible]);
 
     useEffect(() => {
+
         const handleKeyDown = (event: KeyboardEvent) => {
 
             if (event.key === 'Escape') {
