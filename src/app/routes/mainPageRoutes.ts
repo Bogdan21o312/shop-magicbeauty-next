@@ -1,5 +1,6 @@
 export const HOME_PAGE = '/'
 export const CATEGORIES_PAGE = 'categories'
+export const PRODUCTS_PAGE = 'products'
 export const CHECKOUT_PAGE = 'checkout'
 export const ABOUT_PAGE = 'about'
 export const NEWS_PAGE = 'news'

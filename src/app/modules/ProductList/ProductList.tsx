@@ -25,7 +25,7 @@ export const ProductList = () => {
     const mainData = data.data
     return (
         <>
-            <Create />
+            <Create/>
             <div className={classes.items}>
                 {mainData.map(product =>
                     <ProductCard key={product._id} imageSrc={product.picture} imageAlt={'Image'} title={product.title}

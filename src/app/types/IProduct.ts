@@ -1,7 +1,7 @@
 export interface IProduct {
-    _id: string
+    _id?: string
     title: string
     capacity: string
     name: string
-    picture: string | File
+    picture: File | null
 }

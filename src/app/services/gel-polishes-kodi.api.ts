@@ -14,7 +14,7 @@ export const gelPolishesKodiApi = createApi({
             }),
         }),
         getGelPolishesKodiByID: builder.query<IProduct, number>({
-            query: (id) => `gel-polishes-kodi/${id}`,
+            query: (_id) => `gel-polishes-kodi/${_id}`,
         }),
         createGelPolishesKodi: builder.mutation<IProduct, IProduct>({
             query: (product) => ({
