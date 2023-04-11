@@ -1,4 +1,5 @@
 import classes from "./Loader.module.scss"
+import {useEffect} from "react";
 
 export const Loader = () => {
     return (

@@ -1,0 +1,34 @@
+@import "src/assets/styles/style";
+
+.section {
+  position: relative;
+  &::after {
+    color: #e3e6ec;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 60, 25);
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    @include adaptiveValue("right", 120, 7.5);
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+    @media (max-width: $mobile) {
+      top: rem(20);
+      right: 50%;
+    }
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  @media (min-width: $mobile) {
+    align-items: center;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+  @media (max-width: $mobile) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

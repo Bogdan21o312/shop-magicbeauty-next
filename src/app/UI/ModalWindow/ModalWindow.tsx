@@ -1,65 +1,34 @@
-import React, {FC, useEffect, MouseEvent} from 'react';
-import classes from "./ModalWindow.module.scss"
-import {IModalWindow} from "@/app/UI/ModalWindow/IModalWindow";
-import {Text} from "@/app/UI";
-import {IconPlus} from "@/assets/config";
+import React, { FC} from 'react';
+import classes from './ModalWindow.module.scss';
+import { IModalWindow } from '@/app/UI/ModalWindow/IModalWindow';
+import { IconPlus } from '@/assets/config';
+import { Text } from '@/app/UI';
+import {useModalWindow} from "@/app/UI/ModalWindow/useModalWindow";
 
-export const ModalWindow:FC<IModalWindow> = ({children, visible, setVisible, title}) => {
+export const ModalWindow: FC<IModalWindow> = ({ children, title, visible, setVisible, hashUrl }) => {
+    const { hash, closeModalWindow, stopPropagation } = useModalWindow(hashUrl, visible, setVisible);
 
-    const isVisible = visible? classes.active : ''
-
-    const mainClasses = `${classes.modal} ${isVisible}`
-
-    const closeModalWindow = () => {
-        setVisible(false)
-    }
-
-    const stopPropagation = (e: MouseEvent<HTMLDivElement>) => {
-        e.stopPropagation()
-    }
-
-    useEffect(() => {
-
-        if (visible) {
-            document.body.classList.add('lock');
-        } else {
-            document.body.classList.remove('lock');
-        }
-
-        return () => {
-            document.body.classList.remove('lock');
-        }
-
-    }, [visible]);
-
-    useEffect(() => {
-
-        const handleKeyDown = (event: KeyboardEvent) => {
-
-            if (event.key === 'Escape') {
-                closeModalWindow();
-            }
-
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-        };
-
-    }, []);
+    const isVisible = visible ? classes.active : '';
+    const mainClasses = `${classes.modal} ${isVisible} ${hash === hashUrl ? classes.showPopup : ''}`;
 
     return (
-        <div className={mainClasses} onClick={closeModalWindow}>
+        <div
+            className={mainClasses}
+            onClick={() => {
+                if (hash !== hashUrl) {
+                    window.history.pushState({}, document.title, `#${hashUrl}`);
+                }
+                closeModalWindow();
+            }}
+        >
             <div className={classes.modalBody} onClick={stopPropagation}>
                 <div className={classes.modalTop}>
                     <Text title>{title}</Text>
-                    <button onClick={closeModalWindow} className={classes.modalClose}><IconPlus/></button>
+                    <button onClick={closeModalWindow} className={classes.modalClose}>
+                        <IconPlus />
+                    </button>
                 </div>
-                <div className={classes.modalContent}>
-                    {children}
-                </div>
+                <div className={classes.modalContent}>{children}</div>
             </div>
         </div>
     );

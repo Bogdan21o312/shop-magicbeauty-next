@@ -16,13 +16,13 @@
 // Connection of fonts ==============================================================================================================================================================================================================================================================================
 @import "fonts/main";
 
-$fontSize: rem(14); // where 14(px) is the default font size from the layout
+$fontSize: rem(14); // where 14(px) is the default font size from the LayoutAbout
 
 // Adaptive grid settings ===============================================================================================================================================================================================================================================================================================
 
 // Minimum page width
 $minWidth: 320;
-// Canvas width (layout)
+// Canvas width (LayoutAbout)
 $maxWidth: 1920;
 // Width of bounding container (0 = no bounding)
 $maxWidthContainer: 1170;

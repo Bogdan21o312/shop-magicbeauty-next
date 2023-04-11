@@ -1,8 +1,7 @@
 import React from 'react';
-import {Products} from "@/app/screens";
 
 const Index = () => {
-    return <Products/>
+    return <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto asperiores commodi enim hic iure nam nisi nobis numquam tempora, voluptatibus. Atque aut est explicabo fugit laudantium neque non quisquam quos!</div>
 };
 
 export default Index;

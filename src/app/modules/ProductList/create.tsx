@@ -1,5 +1,6 @@
-import { useCreateGelPolishesKodiMutation } from "@/app/services/gel-polishes-kodi.api";
+import {useCreateGelPolishesKodiMutation} from "@/app/services/gel-polishes-kodi.api";
 import {useState} from "react";
+import {useRouter} from "next/router";
 
 export function Create() {
     const [formData, setFormData] = useState({
@@ -9,12 +10,15 @@ export function Create() {
         picture: null,
     });
 
-    const [createGelPolishesKodi, { error: createError, isLoading: isCreateLoading }] = useCreateGelPolishesKodiMutation();
+    const [createGelPolishesKodi, {
+        error: createError,
+        isLoading: isCreateLoading
+    }] = useCreateGelPolishesKodiMutation();
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
-        const { title, name, capacity, picture } = formData;
+        const {title, name, capacity, picture} = formData;
 
         if (!picture) return;
 
@@ -26,17 +30,10 @@ export function Create() {
 
         // @ts-ignore
         createGelPolishesKodi(data)
-            .then((res) => {
-                // @ts-ignore
-                console.log(res.data);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
     };
 
     const handleChange = (e: any) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
 
         if (name === "picture") {
             const file = e.target.files?.[0]; // використання операції зіткнення null тут
@@ -82,7 +79,7 @@ export function Create() {
             />
 
             <label htmlFor="picture">Picture</label>
-            <input type="file" id="picture" name="picture" onChange={handleChange} />
+            <input type="file" id="picture" name="picture" onChange={handleChange}/>
 
             <button type="submit" disabled={isCreateLoading}>
                 {isCreateLoading ? "Loading..." : "Submit"}

@@ -1,8 +1,10 @@
+import {LayoutMain} from "@/app/layouts";
 
 export const Categories = () => {
+
     return (
-        <div>
-            ScreensCategories
-        </div>
+        <LayoutMain>
+
+        </LayoutMain>
     );
 };

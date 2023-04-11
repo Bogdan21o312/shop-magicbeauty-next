@@ -1,5 +1,5 @@
-import {Products} from "@/app/screens/Products/Products";
+import {GelPolishesKodi} from "@/app/screens/Products/GelPolishesKodi";
 
 export {
-    Products
+    GelPolishesKodi
 }

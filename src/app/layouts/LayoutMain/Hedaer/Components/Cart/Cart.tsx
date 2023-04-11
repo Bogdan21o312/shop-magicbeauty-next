@@ -4,6 +4,7 @@ import {useState} from "react";
 import dynamic from "next/dynamic";
 import {Loader} from "@/app/UI";
 import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
+import {CHECKOUT_PAGE} from "@/app/routes/mainPageRoutes";
 const ModalWindow = dynamic(() => import('@/app/UI').then((mod) => mod.ModalWindow), {
     ssr: false,
     loading: () => <Loader/>,
@@ -17,11 +18,9 @@ export const Cart = () => {
 
     return (
         <>
-            {isModalVisible && (
-                <ModalWindow title={'title'} visible={isModalVisible} setVisible={setIsModalVisible}>
-                    <p>This is the content of the modal window.</p>
-                </ModalWindow>
-            )}
+            <ModalWindow hashUrl={'popup'} title={'title'} visible={isModalVisible} setVisible={setIsModalVisible}>
+                <p>This is the content of the modal window.</p>
+            </ModalWindow>
             <div className={classes.cart}>
                 <button onClick={showModal} className={classes.cartIcon}>
                     <IconCart/>
@@ -29,7 +28,7 @@ export const Cart = () => {
                 </button>
                 <div className={classes.cartBody}>
                     <div className={classes.cartBodySum}>0 грн.</div>
-                    <CustomLink href={'checkout'} className={classes.cartBodyLink}>Оформити замовлення</CustomLink>
+                    <CustomLink href={CHECKOUT_PAGE} className={classes.cartBodyLink}>Оформити замовлення</CustomLink>
                 </div>
             </div>
         </>

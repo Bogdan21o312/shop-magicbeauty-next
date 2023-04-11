@@ -5,4 +5,5 @@ export interface IModalWindow {
     visible: boolean
     setVisible?: any
     title: string
+    hashUrl: string
 }
