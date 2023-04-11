@@ -1,0 +1,69 @@
+@import "src/assets/styles/style";
+
+.products {
+  display: grid;
+  @include adaptiveValue("row-gap", 20, 10);
+  @include adaptiveValue("column-gap", 20, 10);
+
+  &.productsHowBaz {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &.productsHowFour {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.productsHowFive {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &.productsHowSix {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &.productsHowSeven {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &.productsHowEight {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+}
+
+.button {
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: rem(1) solid $ColorMain;
+  border-radius: 50%;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+      background-color: $ColorMain;
+    }
+  }
+
+  &._active {
+    background-color: $ColorMain;
+    color: $ColorWhite;
+  }
+}
+
+.body {
+  display: inline-flex;
+  width: auto;
+  padding: rem(10);
+  border: rem(1) solid $ColorMain;
+  @include adaptiveValue("margin-bottom", 30, 20);
+  border-radius: rem(24);
+  gap: rem(15);
+}

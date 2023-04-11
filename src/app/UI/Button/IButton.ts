@@ -15,9 +15,10 @@ type IButtonSecondaryProps<E extends ElementType = ElementType> = {
 type IButtonOwnProps<E extends ElementType = ElementType> = IButtonPrimaryProps | IButtonSecondaryProps & {
     as?: E;
     widthHundredPercent?: boolean
-    children: never;
+    children?: never;
     text: ReactNode
-    icon: ReactNode
+    icon?: ReactNode
+    border?: boolean
 };
 
 export const defaultElementButton = "button";

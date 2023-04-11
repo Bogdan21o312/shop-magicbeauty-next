@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import classes from "./Timer.module.scss"
 
 interface TimeState {
@@ -49,56 +49,16 @@ export const Timer: React.FC = () => {
         };
     }, []);
 
+
     return (
         <>
-            {/*<div className={classes.container}>*/}
-            {/*    <div className="container-segment">*/}
-            {/*        <div className="segment-title">Hours</div>*/}
-            {/*        <div className="segment">*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.hoursTens}</div>*/}
-            {/*                <div className="bottom">{time.hoursTens}</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.hoursOnes}</div>*/}
-            {/*                <div className="bottom">{time.hoursOnes}</div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="container-segment">*/}
-            {/*        <div className="segment-title">Minutes</div>*/}
-            {/*        <div className="segment">*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.minutesTens}</div>*/}
-            {/*                <div className="bottom">{time.minutesTens}</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.minutesOnes}</div>*/}
-            {/*                <div className="bottom">{time.minutesOnes}</div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="container-segment">*/}
-            {/*        <div className="segment-title">Seconds</div>*/}
-            {/*        <div className="segment">*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.secondsTens}</div>*/}
-            {/*                <div className="bottom">{time.secondsTens}</div>*/}
-            {/*            </div>*/}
-            {/*            <div className="flip-card">*/}
-            {/*                <div className="top">{time.secondsOnes}</div>*/}
-            {/*                <div className="bottom">{time.secondsOnes}</div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <div className={classes.container}>
                 <div className={classes.containerSegment}>
                     <div className={classes.segmentTitle}>Hours</div>
                     <div className={classes.segment}>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.hoursTens}</div>
-                            <div className={classes.bottom}>{time.hoursTens}</div> {/* use classes.bottom for bottom div */}
+                            <div className={classes.bottom}>{time.hoursTens}</div>
                         </div>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.hoursOnes}</div>
@@ -111,7 +71,7 @@ export const Timer: React.FC = () => {
                     <div className={classes.segment}>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.minutesTens}</div>
-                            <div className={classes.bottom}>{time.minutesTens}</div> {/* use classes.bottom for bottom div */}
+                            <div className={classes.bottom}>{time.minutesTens}</div>
                         </div>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.minutesOnes}</div>
@@ -124,7 +84,7 @@ export const Timer: React.FC = () => {
                     <div className={classes.segment}>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.secondsTens}</div>
-                            <div className={classes.bottom}>{time.secondsTens}</div> {/* use classes.bottom for bottom div */}
+                            <div className={classes.bottom}>{time.secondsTens}</div>
                         </div>
                         <div className={classes.flipCard}>
                             <div className={classes.top}>{time.secondsOnes}</div>

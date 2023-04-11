@@ -1,3 +1,4 @@
+@import "src/assets/styles/style";
 
 .flipCard {
   position: relative;
@@ -19,19 +20,23 @@
 
 .top,
 .flipCard .topFlip {
-  background-color: #f7f7f7;
   border-top-right-radius: .1em;
+  background-color: $ColorMain;
   border-top-left-radius: .1em;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(152, 152, 152, 0.53);
+  color: $ColorWhite;
+  font-size: 2rem;
 }
 
 .bottom,
 .flipCard .bottomFlip {
-  background-color: white;
+  background-color: $ColorMain;
+  color: $ColorWhite;
   display: flex;
   align-items: flex-end;
   border-bottom-right-radius: .1em;
   border-bottom-left-radius: .1em;
+  font-size: 2rem;
 }
 
 .flipCard .topFlip {
@@ -64,11 +69,11 @@
 
 .container {
   display: flex;
-  gap: .5em;
-  justify-content: center;
+  gap: 1em;
 }
 
 .containerSegment {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: .1em;
@@ -81,5 +86,8 @@
 }
 
 .segmentTitle {
+  position: absolute;
+  z-index: 2;
+  bottom: -18px;
   font-size: 1rem;
 }

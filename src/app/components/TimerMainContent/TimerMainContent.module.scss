@@ -1,0 +1,22 @@
+@import "src/assets/styles/style";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: rem(70);
+  margin: rem(20);
+  padding: rem(25) rem(40) rem(25) rem(40);
+  border: rem(1) solid $ColorMain;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 600;
+  color: $ColorMain;
+}
+
+.flex {
+  display: flex;
+  gap: rem(30);
+}
