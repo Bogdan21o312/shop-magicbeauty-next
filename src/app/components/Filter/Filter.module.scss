@@ -59,11 +59,43 @@
 }
 
 .body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include adaptiveValue("margin-bottom", 30, 20);
+}
+
+.switch {
   display: inline-flex;
   width: auto;
   padding: rem(10);
   border: rem(1) solid $ColorMain;
-  @include adaptiveValue("margin-bottom", 30, 20);
   border-radius: rem(24);
   gap: rem(15);
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  padding: rem(10);
+  transition: all 0.3s ease 0s;
+  border: rem(1) solid $ColorMain;
+  border-radius: rem(15);
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+      background-color: $ColorMain;
+    }
+  }
+
+  &._active {
+    background-color: $ColorMain;
+    color: $ColorWhite;
+  }
 }

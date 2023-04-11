@@ -7,6 +7,7 @@ import {ModalWindow} from "@/app/UI/ModalWindow";
 import {Accordion} from "@/app/UI/Accordion";
 import {Loader} from "@/app/UI/Loader";
 import {Timer} from "@/app/UI/Timer";
+import {Select} from "@/app/UI/Select";
 
 export {
     Button,
@@ -17,5 +18,6 @@ export {
     ModalWindow,
     Accordion,
     Loader,
-    Timer
+    Timer,
+    Select
 }
