@@ -1,6 +1,4 @@
 import classes from "./HedaerTop.module.scss"
-import Link from "next/link";
-import {Button} from "@/app/UI";
 import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
 import {
     ABOUT_PAGE,
@@ -10,6 +8,7 @@ import {
     PAYMENT_AND_DELIVERY_PAGE
 } from "@/app/routes/mainPageRoutes";
 import {Login} from "@/app/layouts/LayoutMain/Hedaer/Components/Login";
+import {useToken} from "@/app/hooks";
 
 export const HeaderTop = () => {
 
@@ -20,6 +19,8 @@ export const HeaderTop = () => {
         {text: "Контактна інформація", href: CONTACT_PAGE},
         {text: "Категорії", href: CATEGORIES_PAGE}
     ]
+
+    const hasToken = useToken();
 
     return (
         <div className={classes.top}>
@@ -33,7 +34,7 @@ export const HeaderTop = () => {
                 </ul>
             </div>
             <div className={classes.success}>
-                <Login/>
+                {hasToken? <div>Вихід</div>: <Login/>}
                 <button className={classes.text}>Реєстрація</button>
             </div>
         </div>

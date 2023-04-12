@@ -4,6 +4,7 @@ import {useStarRating} from "@/app/hooks/useStarRating";
 import {useTabsToggle} from "@/app/hooks/useTabToggle";
 import {useMediaQuery} from "@/app/hooks/useMediaQuery";
 import {useIsTouchDevice} from "@/app/hooks/useIsTouchDevice";
+import {useToken} from "@/app/hooks/useToken";
 
 export {
     useTabsToggle,
@@ -12,5 +13,6 @@ export {
     useAppDispatch,
     useHover,
     useMediaQuery,
-    useIsTouchDevice
+    useIsTouchDevice,
+    useToken
 }

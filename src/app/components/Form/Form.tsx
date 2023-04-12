@@ -1,39 +1,51 @@
-import React, {FC, useState, MouseEvent, ChangeEvent} from 'react';
-import {ILogin} from "@/app/types/IAuth";
-import {Button} from "@/app/UI";
+import React, { useState } from 'react';
 
-interface IForm {
-    create: any
-}
+const loginUser = async (email: string, password: string): Promise<void> => {
+    try {
+        const response = await fetch('http://localhost:9422/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        });
 
-export const Form:FC<IForm> = ({create}) => {
+        if (response.ok) {
+            const data = await response.json();
+            const token = data.accessToken;
 
-    const [login, setLogin] = useState({email: 'root@dgmail.com', password: '12345678'});
-
-    const handleLogin =  (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
-        const AALogin = {
-            ...login as ILogin
+            localStorage.setItem('token', token);
+        } else {
+            console.error('Помилка логіну:', response.statusText);
         }
-        create(AALogin)
-        // setLogin({email: '', password: ''})
+    } catch (error) {
+        console.error('Помилка логіну:', error);
     }
+};
+
+export const Form: React.FC = () => {
+    const [email, setEmail] = useState('root@dgmail.com');
+    const [password, setPassword] = useState('12345678');
+
+    const handleLogin = (): void => {
+        loginUser(email, password);
+    };
 
     return (
-        <form action="#">
+        <div>
             <input
-                value={login.email}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setLogin({...login, email: e.target.value})}
-                type="text"
-                placeholder="email"
+                type="email"
+                placeholder="Електронна пошта"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
             <input
-                value={login.password}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => setLogin({...login, password: e.target.value})}
-                type="text"
-                placeholder="password"
+                type="password"
+                placeholder="Пароль"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
             />
-            <Button text={'Create'} onClick={handleLogin}/>
-        </form>
+            <button onClick={handleLogin}>Увійти</button>
+        </div>
     );
 };
