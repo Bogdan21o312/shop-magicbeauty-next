@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const loginUser = async (email: string, password: string): Promise<void> => {
+
     try {
         const response = await fetch('http://localhost:9422/users/login', {
             method: 'POST',
@@ -24,6 +25,7 @@ const loginUser = async (email: string, password: string): Promise<void> => {
 };
 
 export const Form: React.FC = () => {
+
     const [email, setEmail] = useState('root@dgmail.com');
     const [password, setPassword] = useState('12345678');
 

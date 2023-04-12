@@ -1,6 +1,10 @@
 import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 export const useToken = () => {
+
+    const router = useRouter()
+
     const [hasToken, setHasToken] = useState(false);
 
     const localStorageModule = {
@@ -10,11 +14,13 @@ export const useToken = () => {
         setItem: (key: string, value: string) => {
             localStorage.setItem(key, value);
         },
+        removeItem: (key: string) => {
+            localStorage.removeItem(key);
+        },
     };
 
     useEffect(() => {
         const checkLocalStorage = () => {
-            // Використання методів з localStorageModule
             const token = localStorageModule.getItem('token');
             const hasToken = typeof token !== 'undefined' && token !== null;
 
@@ -24,5 +30,11 @@ export const useToken = () => {
         checkLocalStorage();
     }, []);
 
-    return hasToken;
+    const handleLogout = () => {
+        localStorageModule.removeItem('token');
+        setHasToken(false);
+        router.reload()
+    };
+
+    return { hasToken, handleLogout };
 };

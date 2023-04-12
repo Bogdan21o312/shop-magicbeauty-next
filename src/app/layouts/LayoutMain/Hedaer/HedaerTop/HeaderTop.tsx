@@ -20,8 +20,7 @@ export const HeaderTop = () => {
         {text: "Категорії", href: CATEGORIES_PAGE}
     ]
 
-    const hasToken = useToken();
-
+    const { hasToken, handleLogout } = useToken();
     return (
         <div className={classes.top}>
             <div className={classes.content}>
@@ -34,7 +33,7 @@ export const HeaderTop = () => {
                 </ul>
             </div>
             <div className={classes.success}>
-                {hasToken? <div>Вихід</div>: <Login/>}
+                {hasToken?  <button onClick={handleLogout}>Вихід</button> : <Login/>}
                 <button className={classes.text}>Реєстрація</button>
             </div>
         </div>

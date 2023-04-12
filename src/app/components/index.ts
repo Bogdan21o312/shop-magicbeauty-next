@@ -4,6 +4,7 @@ import {VisibilitySensor} from "@/app/components/VisibilitySensor";
 import {TimerMainContent} from "@/app/components/TimerMainContent";
 import {Filter} from "@/app/components/Filter";
 import {Form} from "@/app/components/Form";
+import {PrivateRoute} from "@/app/components/PrivateRoute";
 
 export {
     ProductCard,
@@ -11,5 +12,6 @@ export {
     VisibilitySensor,
     TimerMainContent,
     Filter,
-    Form
+    Form,
+    PrivateRoute
 }
