@@ -9,6 +9,7 @@ import {
     NEWS_PAGE,
     PAYMENT_AND_DELIVERY_PAGE
 } from "@/app/routes/mainPageRoutes";
+import {Login} from "@/app/layouts/LayoutMain/Hedaer/Components/Login";
 
 export const HeaderTop = () => {
 
@@ -32,7 +33,7 @@ export const HeaderTop = () => {
                 </ul>
             </div>
             <div className={classes.success}>
-                <button className={classes.text}>Вхід</button>
+                <Login/>
                 <button className={classes.text}>Реєстрація</button>
             </div>
         </div>

@@ -1,0 +1,73 @@
+@import "src/assets/styles/style";
+
+.customSelect {
+  position: relative;
+  width: rem(200);
+  display: flex;
+  border: rem(1) solid $ColorMain;
+  padding: rem(10);
+  border-radius: rem(20);
+  cursor: pointer;
+}
+
+.customSelect__arrow {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  svg {
+    transition: all 0.3s ease 0s;
+  }
+  span {
+    transition: all 0.3s ease 0s;
+    &.arrowUp {
+      svg {
+        transform: rotate(180deg);
+
+      }
+    }
+
+    svg {
+      path {
+        max-width: 10px;
+        max-height: 10px;
+      }
+    }
+  }
+}
+
+.customSelect__select {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: right;
+}
+
+.customSelect__selectedOption {
+  position: relative;
+}
+
+.customSelect__options {
+  transition: all 0.3s ease 0s;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  right: 0;
+  background-color: $ColorWhite;
+  width: 200%;
+  border: rem(1) solid $ColorMain;
+  padding: rem(10);
+  border-radius: rem(20);
+}
+
+.customSelectOptionSelected {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.customSelectOption {
+  cursor: pointer;
+}

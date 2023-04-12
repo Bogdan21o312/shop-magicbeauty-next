@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import classes from "./Select.module.scss"
+import {IconArrow} from "@/assets/config";
 
 interface Option {
     value: string;
@@ -13,11 +14,13 @@ interface CustomSelectProps {
 export const Select: React.FC<CustomSelectProps> = ({ options }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
-    const selectRef = useRef<HTMLSelectElement>(null);
+    const [isOptionSelected, setIsOptionSelected] = useState(false);
+    const selectRef = useRef<any>(null);
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedOption(e.target.value);
         setIsOpen(false);
+        setIsOptionSelected(true);
     };
 
     const handleSelectClick = () => {
@@ -28,7 +31,7 @@ export const Select: React.FC<CustomSelectProps> = ({ options }) => {
         if (
             !selectRef.current?.contains(e.target as Node) &&
             isOpen &&
-            selectedOption !== null
+            isOptionSelected
         ) {
             setIsOpen(false);
         }
@@ -40,19 +43,20 @@ export const Select: React.FC<CustomSelectProps> = ({ options }) => {
         return () => {
             document.body.removeEventListener('click', handleBodyClick);
         };
-    }, [isOpen, selectedOption]);
+    }, [isOpen, isOptionSelected]);
 
     return (
         <div className={classes.customSelect}>
             <div
                 className={`${classes.customSelect__select} ${isOpen ? classes.open : ''}`}
                 onClick={handleSelectClick}
+                ref={selectRef}
             >
                 <div className={classes.customSelect__selectedOption}>
                     {selectedOption !== null ? options.find(option => option.value === selectedOption)?.label : 'Select an option'}
                 </div>
                 <div className={classes.customSelect__arrow}>
-                    <span className={isOpen ? classes.arrowUp : classes.arrowDown}></span>
+                    <span className={isOpen ? classes.arrowUp : classes.arrowDown}><IconArrow/></span>
                 </div>
             </div>
             {isOpen && (
@@ -60,10 +64,7 @@ export const Select: React.FC<CustomSelectProps> = ({ options }) => {
                     {options.map(option => (
                         <li
                             key={option.value}
-                            className={`
-                ${classes.customSelect__option}
-                ${option.value === selectedOption ? classes.customSelect__optionSelected : ''}
-              `}
+                            className={`${classes.customSelectOption} ${option.value === selectedOption ? classes.customSelectOptionSelected : ''}`}
                             onClick={() => handleSelectChange({ target: { value: option.value } } as React.ChangeEvent<HTMLSelectElement>)}
                         >
                             {option.label}
