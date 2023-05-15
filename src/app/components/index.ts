@@ -3,8 +3,8 @@ import {FullPageScroll} from "@/app/components/FullPageScroll";
 import {VisibilitySensor} from "@/app/components/VisibilitySensor";
 import {TimerMainContent} from "@/app/components/TimerMainContent";
 import {Filter} from "@/app/components/Filter";
-import {Form} from "@/app/components/Form";
-import {PrivateRoute} from "@/app/components/PrivateRoute";
+import {PrivateRoute} from "@/app/screens/AdminDashboard/components/PrivateRoute";
+import {LoginForm} from "@/app/components/Forms";
 
 export {
     ProductCard,
@@ -12,6 +12,6 @@ export {
     VisibilitySensor,
     TimerMainContent,
     Filter,
-    Form,
-    PrivateRoute
+    PrivateRoute,
+    LoginForm
 }

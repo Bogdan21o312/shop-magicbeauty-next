@@ -1,14 +1,15 @@
 import classes from "./HedaerTop.module.scss"
 import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
+import {Login} from "@/app/layouts/LayoutMain/Hedaer/Components/Login";
+import {useToken} from "@/app/hooks";
 import {
-    ABOUT_PAGE,
+    ADMIN_DASHBOARD_PAGE, ABOUT_PAGE,
     CATEGORIES_PAGE,
     CONTACT_PAGE,
     NEWS_PAGE,
     PAYMENT_AND_DELIVERY_PAGE
-} from "@/app/routes/mainPageRoutes";
-import {Login} from "@/app/layouts/LayoutMain/Hedaer/Components/Login";
-import {useToken} from "@/app/hooks";
+} from "@/app/routes";
+import {Register} from "@/app/layouts/LayoutMain/Hedaer/Components";
 
 export const HeaderTop = () => {
 
@@ -17,10 +18,11 @@ export const HeaderTop = () => {
         {text: "Оплата і доставка", href: PAYMENT_AND_DELIVERY_PAGE},
         {text: "Новини", href: NEWS_PAGE},
         {text: "Контактна інформація", href: CONTACT_PAGE},
-        {text: "Категорії", href: CATEGORIES_PAGE}
+        {text: "Категорії", href: CATEGORIES_PAGE},
+        {text: "Адмін панель", href: ADMIN_DASHBOARD_PAGE}
     ]
 
-    const { hasToken, handleLogout } = useToken();
+    const {hasToken, handleLogout} = useToken();
     return (
         <div className={classes.top}>
             <div className={classes.content}>
@@ -33,8 +35,8 @@ export const HeaderTop = () => {
                 </ul>
             </div>
             <div className={classes.success}>
-                {hasToken?  <button onClick={handleLogout}>Вихід</button> : <Login/>}
-                <button className={classes.text}>Реєстрація</button>
+                {hasToken ? <button onClick={handleLogout}>Вихід</button> : <Login/>}
+                {/*{hasToken ? <div>Ви зареєстровані</div> : <Register/>}*/}
             </div>
         </div>
     );

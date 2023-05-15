@@ -1,42 +1,44 @@
+@import "src/assets/styles/style";
+
 .inputWrapper {
   position: relative;
-  margin: 20px auto;
+  &:first-child {
+    margin-top: rem(10);
+  }
+  margin: rem(30) auto;
 }
 
 .formControl {
   display: block;
   line-height: 2em;
   margin: 0;
-  padding-left: 10px;
   width: 100%;
   font-size: medium;
-  border: 1px solid #f4f4f4;
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  border: rem(2) solid $ColorMain;
+  background-color: $ColorWhite;
+  border-radius: rem(36);
   font-weight: 500;
-}
-
-.formControl:focus {
-  border: 1px solid #2c7ac9;
+  padding: rem(8) rem(18);
 }
 
 .controlLabel {
+  background-color: $ColorMain;
+  border: rem(1) solid $ColorWhite;
   display: block;
   position: absolute;
   opacity: 0;
   bottom: 1.9rem;
-  color: #5d5d5d;
+  border-radius: rem(36);
+  color: $ColorWhite;
   transition: 0.2s ease-in-out transform;
   font-size: 12px;
+  padding: rem(8) rem(18);
 }
 
 .formControl:placeholder-shown + .controlLabel {
   visibility: hidden;
   z-index: -1;
-  transition: 0.2s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .formControl:not(:placeholder-shown) + .controlLabel,
@@ -44,6 +46,6 @@
   visibility: visible;
   z-index: 1;
   opacity: 1;
-  transform: translateY(-10px);
-  transition: 0.2s ease-in-out transform;
+  transform: translateY(-7px);
+  transition: 0.4s ease-in-out transform;
 }

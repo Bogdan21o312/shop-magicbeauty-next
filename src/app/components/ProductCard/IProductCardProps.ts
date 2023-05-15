@@ -9,7 +9,7 @@ export interface IProductCardProps {
 
     textButton?: string
 
-    price: number
+    price: string
     sale?: number
 
     rating?: boolean
@@ -17,5 +17,5 @@ export interface IProductCardProps {
     numberOFReviews?: number
 
     item: IProduct
-    remove: (item: IProduct) => void
+    remove?: (item: IProduct) => void
 }

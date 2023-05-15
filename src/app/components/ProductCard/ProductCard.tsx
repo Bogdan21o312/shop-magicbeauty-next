@@ -1,15 +1,13 @@
-import {FC, useEffect, useState, MouseEventHandler} from "react";
+import {FC, MouseEventHandler} from "react";
 import {IProductCardProps} from "@/app/components/ProductCard/IProductCardProps";
 import classes from "./ProductCard.module.scss"
-import {Button, Ibg, StarRating, Text} from "@/app/UI";
+import {Button, Ibg, Text} from "@/app/UI";
 import {IconCart, IconLove} from "@/assets/config";
+import {useToken} from "@/app/hooks";
 
 
 export const ProductCard: FC<IProductCardProps> = ({
-                                                       textButton,
                                                        imageAlt,
-                                                       numberOFReviews,
-                                                       rating,
                                                        imageSrc,
                                                        title,
                                                        size,
@@ -20,6 +18,7 @@ export const ProductCard: FC<IProductCardProps> = ({
                                                        sale
                                                    }) => {
 
+    const {hasToken, handleLogout} = useToken();
     const handleRemove: MouseEventHandler<HTMLButtonElement> = (event) => {
         event.stopPropagation();
         remove(item);
@@ -47,7 +46,9 @@ export const ProductCard: FC<IProductCardProps> = ({
             </div>
             <div className={classes.mainLine}></div>
             <div className={classes.clPrice}>
-                <div className={classes.priceNum}>{price} грн.</div>
+                <div className={classes.priceNum}>
+                    {hasToken ? `${price * 0.95} грн.` : `${price} грн.`}
+                </div>
                 <span>- {sale}</span>
                 <button className={classes.priceLove}><IconLove/></button>
             </div>

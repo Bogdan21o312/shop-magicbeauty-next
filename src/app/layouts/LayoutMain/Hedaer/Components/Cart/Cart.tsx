@@ -1,28 +1,33 @@
 import classes from "@/app/layouts/LayoutMain/Hedaer/HedaerCenter/HeaderCenterDesktop/HeaderCenterDesktop.module.scss";
 import {IconCart} from "@/assets/config";
-import {useState} from "react";
 import dynamic from "next/dynamic";
 import {Loader} from "@/app/UI";
 import {CustomLink} from "@/app/UI/CustomLink/CustomLink";
-import {CHECKOUT_PAGE} from "@/app/routes/mainPageRoutes";
+import {CART_POPUP, CHECKOUT_PAGE} from "@/app/routes";
+import {useToggleModel} from "@/app/hooks";
+import {useEffect} from "react";
 const ModalWindow = dynamic(() => import('@/app/UI').then((mod) => mod.ModalWindow), {
     ssr: false,
     loading: () => <Loader/>,
 })
-export const Cart = () => {
-    const [isModalVisible, setIsModalVisible] = useState(false);
 
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
+export const Cart = () => {
+
+    const { isModalVisible, handleHideModal, handleShowModal } = useToggleModel(CART_POPUP);
+
+    useEffect(() => {
+        if (window.location.hash.substr(1) === CART_POPUP) {
+            handleShowModal();
+        }
+    }, [handleShowModal]);
 
     return (
         <>
-            <ModalWindow hashUrl={'popup'} title={'title'} visible={isModalVisible} setVisible={setIsModalVisible}>
-                <p>This is the content of the modal window.</p>
+            <ModalWindow hashUrl={CART_POPUP} title={'title'} visible={isModalVisible} setVisible={handleHideModal}>
+
             </ModalWindow>
             <div className={classes.cart}>
-                <button onClick={showModal} className={classes.cartIcon}>
+                <button onClick={handleShowModal} className={classes.cartIcon}>
                     <IconCart/>
                     <span>0</span>
                 </button>

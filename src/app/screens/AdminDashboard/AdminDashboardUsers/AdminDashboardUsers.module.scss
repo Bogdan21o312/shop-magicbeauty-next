@@ -1,0 +1,92 @@
+@import "src/assets/styles/style";
+
+.table {
+  margin-top: 100px;
+  font-size: 18px;
+  overflow: auto;
+  min-width: rem(1250);
+  max-width: rem(1250);
+  padding-bottom: rem(15);
+}
+
+.thead {
+  width: 100%;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+}
+
+.td,
+.th {
+  white-space: nowrap;
+  padding: rem(10);
+  text-align: center;
+  border: rem(1) solid #383636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  a {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $ColorMain;
+      }
+    }
+  }
+}
+
+.num {
+  max-width: rem(50);
+}
+
+.email {
+  min-width: rem(300);
+}
+
+.ban {
+  min-width: rem(70);
+}
+
+.name {
+  min-width: rem(100);
+}
+
+.surname {
+  min-width: rem(150);
+}
+
+.created_at {
+  min-width: rem(260);
+}
+
+.version {
+  min-width: rem(80);
+}
+
+.phone_number {
+  min-width: rem(250);
+}
+
+.th {
+
+}
+
+.td {
+  width: 100%;
+}
+
+.tbody {
+}
+
+.tbody {
+  .tr:nth-child(odd) {
+    background-color: rgba(255, 226, 233, 0.37);
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+  }
+}

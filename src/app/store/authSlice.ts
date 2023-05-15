@@ -12,7 +12,7 @@ const initialState: AuthState = {
     authState: false,
 };
 
-// Actual Slice
+// Actual features
 export const authSlice = createSlice({
     name: "auth",
     initialState,

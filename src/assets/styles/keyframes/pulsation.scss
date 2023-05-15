@@ -4,34 +4,12 @@
 
 //====================================================================================================
 
-@keyframes pulsation {
-  0% {
-    transform: scale(0.7);
-    opacity: 1;
-    border-radius: rem(10);
+@keyframes pulse {
+  from {
+    background-color: rgb(245, 245, 245);
   }
-
-  50% {
-    opacity: 1;
-    border-radius: rem(15);
-  }
-
-  100% {
-    transform: scale(2);
-    opacity: 0;
-    border-radius: rem(20);
+  to {
+    background-color: #ececec;
   }
 }
-
-// Designed addon for pulsation is used for hover
-
-@keyframes pulsation-shadow {
-  0% {
-    box-shadow: 0 0 rem(10) 0 tomato, 0 0 rem(10) 0 tomato;
-  }
-  100% {
-    box-shadow: 0 0 rem(18) rem(6) rgba(255, 48, 26, 0), 0 0 rem(4) rem(50) rgba(255, 48, 26, 0);
-  }
-}
-
 //====================================================================================================

@@ -9,20 +9,7 @@ export const GelPolishesKodi = () => {
             ProductsGelPolishesKodi
             <TimerMainContent/>
             <Filter>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
-                <ProductCard imageSrc={Image} imageAlt={'Image'} title={'Title'} size={'16'} name={'Гель'} textButton={'Купити'} price={20} rating={false} sale={123}/>
+
             </Filter>
         </LayoutMain>
     );

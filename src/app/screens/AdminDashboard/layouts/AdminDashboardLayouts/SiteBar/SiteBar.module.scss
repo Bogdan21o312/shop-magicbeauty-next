@@ -1,0 +1,45 @@
+@import "src/assets/styles/style";
+
+.nav {
+  padding: rem(20);
+  margin: rem(10);
+  //background-color: $ColorWhite;
+  max-width: rem(400);
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(20);
+  width: 100%;
+}
+
+.item {
+  width: 100%;
+}
+
+.link {
+  padding: rem(15);
+  padding-left: rem(0);
+  width: 100%;
+  color: $ColorDark;
+  display: block;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translate(10px, 0);
+      color: $ColorMain;
+    }
+  }
+
+  &._active {
+    color: $ColorMain;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translate(10px, 0);
+        color: $ColorMain;
+      }
+    }
+  }
+}

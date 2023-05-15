@@ -4,6 +4,12 @@
   background-color: $ColorWhite;
   box-shadow: 0 rem(4) rem(20) rgba(0, 0, 0, 0.1);
   padding: rem(30) rem(10);
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 rem(4) rem(20) rgba(255, 0, 144, 0.4);
+    }
+  }
 }
 
 .clImage {
@@ -43,6 +49,7 @@
   justify-content: space-between;
   position: relative;
   margin-bottom: rem(25);
+
   span {
     position: absolute;
     top: 0;

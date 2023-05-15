@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {BASE_URL_GEL_POLISHES_KODI} from "@/config";
 import {IProduct} from "@/app/types/IProduct";
+import {IUser} from "@/app/types/IUser";
 
 export const gelPolishesKodiApi = createApi({
     reducerPath: "gelPolishesKodiApi",
@@ -9,8 +10,8 @@ export const gelPolishesKodiApi = createApi({
         baseUrl: BASE_URL_GEL_POLISHES_KODI,
     }),
     endpoints: (builder) => ({
-        getGelPolishesKodi: builder.query<IProduct[], { _limit?: number, _page?: number, _search?: string }>({
-            query: ({ _limit = 10, _page = 1, _search }) => ({
+        getGelPolishesKodi: builder.query<{ data: IProduct[] }, { _limit?: number, _page?: number, _search?: string }>({
+            query: ({_limit = 10, _page = 1, _search}) => ({
                 url: 'gel-polishes-kodi/',
                 params: {
                     _limit,
@@ -47,4 +48,9 @@ export const gelPolishesKodiApi = createApi({
     }),
 });
 
-export const {useGetGelPolishesKodiQuery, useCreateGelPolishesKodiMutation, useDeleteGelPolishesKodiMutation, useUpdatedGelPolishesKodiMutation} = gelPolishesKodiApi
+export const {
+    useGetGelPolishesKodiQuery,
+    useCreateGelPolishesKodiMutation,
+    useDeleteGelPolishesKodiMutation,
+    useUpdatedGelPolishesKodiMutation
+} = gelPolishesKodiApi

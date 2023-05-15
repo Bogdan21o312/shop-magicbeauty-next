@@ -1,12 +1,12 @@
 import {useCreateGelPolishesKodiMutation} from "@/app/services/gel-polishes-kodi.api";
 import {useState} from "react";
-import {useRouter} from "next/router";
 
 export function Create() {
     const [formData, setFormData] = useState({
         title: "",
         name: "",
         capacity: "",
+        price: "",
         picture: null,
     });
 
@@ -18,7 +18,7 @@ export function Create() {
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
-        const {title, name, capacity, picture} = formData;
+        const {title, name, capacity, price, picture} = formData;
 
         if (!picture) return;
 
@@ -26,6 +26,7 @@ export function Create() {
         data.append("title", title);
         data.append("name", name);
         data.append("capacity", capacity);
+        data.append("price", price);
         data.append("picture", picture);
 
         // @ts-ignore
@@ -75,6 +76,15 @@ export function Create() {
                 id="capacity"
                 name="capacity"
                 value={formData.capacity}
+                onChange={handleChange}
+            />
+
+            <label htmlFor="capacity">price</label>
+            <input
+                type="text"
+                id="price"
+                name="price"
+                value={formData.price}
                 onChange={handleChange}
             />
 

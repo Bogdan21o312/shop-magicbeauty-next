@@ -4,4 +4,5 @@ export interface IProduct {
     capacity: string
     name: string
     picture: File | null
+    price: string
 }

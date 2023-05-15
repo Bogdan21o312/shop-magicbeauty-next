@@ -1,10 +1,10 @@
 import {MouseEventHandler, FC, useState} from "react";
-import Link from "next/link";
+import Link, {LinkProps} from "next/link";
 import {useRouter} from "next/router";
 import {Loader} from "@/app/UI";
 import {ICustomLink} from "@/app/UI/CustomLink/ICustomLink";
 
-export const CustomLink: FC<ICustomLink> = ({href, children, className, ...props}) => {
+export const CustomLink: FC<ICustomLink & LinkProps> = ({href, children, className, ...props}) => {
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
 

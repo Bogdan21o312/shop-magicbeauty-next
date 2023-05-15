@@ -1,28 +1,31 @@
-import React, {useState} from 'react';
-import dynamic from "next/dynamic";
-import classes from "./Login.module.scss"
-import {Loader} from "@/app/UI";
-import {Form} from "@/app/components";
-const ModalWindow = dynamic(() => import('@/app/UI').then((mod) => mod.ModalWindow), {
+import React from 'react';
+import dynamic from 'next/dynamic';
+import classes from './Login.module.scss';
+import { Loader } from '@/app/UI';
+import {LoginForm} from '@/app/components';
+import { LOGIN_POPUP } from '@/app/routes';
+import { useToggleModel } from '@/app/hooks';
+const ModalWindow = dynamic(() => import('@/app/UI').then(mod => mod.ModalWindow), {
     ssr: false,
-    loading: () => <Loader/>,
-})
+    loading: () => <Loader />,
+});
 
 export const Login = () => {
-
-    const [isModalVisible, setIsModalVisible] = useState(false);
-
-
-    const showModal = () => {
-        setIsModalVisible(true);
-    };
+    const { isModalVisible, handleHideModal, handleShowModal } = useToggleModel(LOGIN_POPUP);
 
     return (
         <div className={classes.main}>
-            <ModalWindow hashUrl={'login'} title={'Login'} visible={isModalVisible} setVisible={setIsModalVisible}>
-                <Form />
+            <ModalWindow
+                hashUrl={LOGIN_POPUP}
+                title={'Login'}
+                visible={isModalVisible}
+                setVisible={handleHideModal}
+            >
+                <LoginForm/>
             </ModalWindow>
-            <button onClick={showModal}  className={classes.text}>Вхід</button>
+            <button onClick={handleShowModal} className={classes.text}>
+                Вхід
+            </button>
         </div>
     );
 };

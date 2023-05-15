@@ -1,0 +1,7 @@
+@import "src/assets/styles/style";
+
+.main {
+  display: grid;
+  grid-template-columns: rem(300) 1fr;
+  gap: rem(20);
+}

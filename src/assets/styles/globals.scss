@@ -36,6 +36,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   &::after {
     transition: all 0.3s ease 0s;
     top: 0;
@@ -47,10 +48,12 @@ body {
     height: 100%;
     pointer-events: none;
   }
+
   &.lock {
     overflow: hidden;
     touch-action: none;
     overscroll-behavior: none;
+
     &::after {
       background: rgba(0, 0, 0, 0.25);
     }
@@ -114,7 +117,6 @@ body {
   width: 18px;
   position: relative;
   transition: all 0.3s ease 0s;
-
   &::after {
     content: "";
     height: 2px;
@@ -136,6 +138,15 @@ body {
     transform: translate(0px, -50%);
     position: absolute;
     opacity: 0;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: scale(1.5);
+      &::after {
+        background-color: #FC5185;
+      }
+    }
   }
 }
 

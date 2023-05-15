@@ -1,0 +1,30 @@
+@import "src/assets/styles/style";
+
+.main {
+  position: revert;
+  max-width: rem(3400);
+  padding-right: rem(100);
+  padding-left: rem(100);
+  margin: 0 auto;
+  overflow: hidden;
+  @media (max-width: em(3000)){
+    padding-right: rem(80);
+    padding-left: rem(80);
+  }
+  @media (max-width: em(2000)){
+    padding-right: rem(60);
+    padding-left: rem(60);
+  }
+  @media (max-width: em(1600)){
+    padding-right: rem(40);
+    padding-left: rem(40);
+  }
+  @media (max-width: em(991.98)){
+    padding-right: rem(20);
+    padding-left: rem(20);
+  }
+  @media (max-width: em(600)){
+    padding-right: rem(10);
+    padding-left: rem(10);
+  }
+}
